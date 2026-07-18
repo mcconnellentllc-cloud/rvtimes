@@ -14,8 +14,8 @@
 
   const state = loadState();
 
-  function stepKey(sectionId, index) {
-    return `${sectionId}:${index}`;
+  function stepKey(listKey, index) {
+    return `${listKey}:${index}`;
   }
 
   function applyStep(step, checked) {
@@ -33,21 +33,22 @@
 
   function initSteps() {
     document.querySelectorAll('.steps').forEach((list) => {
-      const sectionId = list.dataset.steps;
+      const listKey = list.dataset.steps;
+      const section = list.closest('.section');
+      const sectionId = section?.dataset.section;
       const steps = list.querySelectorAll('.step');
       steps.forEach((step, i) => {
-        const key = stepKey(sectionId, i);
+        const key = stepKey(listKey, i);
         applyStep(step, !!state[key]);
         step.addEventListener('click', () => {
           const next = step.dataset.checked !== 'true';
           applyStep(step, next);
-          state[key] = next;
-          if (!next) delete state[key];
+          if (next) state[key] = true; else delete state[key];
           saveState(state);
-          updateProgress(sectionId);
+          if (sectionId) updateProgress(sectionId);
         });
       });
-      updateProgress(sectionId);
+      if (sectionId) updateProgress(sectionId);
     });
   }
 
@@ -60,6 +61,7 @@
         document.querySelectorAll('.section').forEach((s) => {
           s.dataset.active = s.dataset.section === target ? 'true' : 'false';
         });
+        window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
       });
     });
   }
@@ -71,9 +73,12 @@
       const activeSection = document.querySelector('.section[data-active="true"]');
       if (!activeSection) return;
       const sectionId = activeSection.dataset.section;
-      activeSection.querySelectorAll('.step').forEach((step, i) => {
-        applyStep(step, false);
-        delete state[stepKey(sectionId, i)];
+      activeSection.querySelectorAll('.steps').forEach((list) => {
+        const listKey = list.dataset.steps;
+        list.querySelectorAll('.step').forEach((step, i) => {
+          applyStep(step, false);
+          delete state[stepKey(listKey, i)];
+        });
       });
       saveState(state);
       updateProgress(sectionId);
