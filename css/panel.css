@@ -632,6 +632,33 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+.bay-contents .primary {
+  display: block;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.bay-contents ul {
+  margin: 0;
+  padding-left: 16px;
+}
+.bay-contents li {
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+.bay-contents .sub {
+  display: block;
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
 .bay-photo {
   margin-top: 12px;
   height: 140px;
