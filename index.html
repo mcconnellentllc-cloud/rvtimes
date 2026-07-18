@@ -30,16 +30,216 @@
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Guide sections">
-      <button class="tab" role="tab" aria-selected="true"  data-section="leveling">Leveling</button>
+      <button class="tab" role="tab" aria-selected="true"  data-section="site-setup">Site Setup</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="cook-camp">Cook Camp</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="leveling">Leveling</button>
       <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
       <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
       <button class="tab" role="tab" aria-selected="false" data-section="plumbing">Plumbing</button>
     </nav>
 
     <!-- ============================================================
+         SITE SETUP (arrival flow)
+         ============================================================ -->
+    <section class="section" id="section-site-setup" data-active="true" data-section="site-setup" role="tabpanel">
+      <div class="section-head">
+        <h2>Site Setup</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">Arrival flow &middot; pull in to plugged in</div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">The master checklist</div>
+          <p>Run this every time you arrive. Any step that leans on a system has a link to the detailed section &mdash; tap the note to jump.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Arrival Sequence</div>
+      <ol class="steps" data-steps="site-setup">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Pull in and park on the pad.
+            <span class="note">Aim for approximately level to keep ram travel short.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Dump air.
+            <span class="note">AIR DUMP wedged &mdash; nickel or sunglasses earpiece. Full procedure: <a href="#section-leveling">Guide &rsaquo; Leveling</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Level the coach.
+            <span class="note">RVA J-II panel &mdash; pads under the 3 rams, LEFT &middot; FRONT &middot; RIGHT to center the bubble. <a href="#section-leveling">See Leveling</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Hook up 50 A shore power.
+            <span class="note">Cord lives in <a href="bays.html#D5">bay D5</a>. Pedestal breaker OFF while connecting, then ON.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Connect city water.
+            <span class="note">City water inlet at the wet bay &mdash; <a href="bays.html#D4">D4</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Connect sewer.
+            <span class="note">Wet bay <a href="bays.html#D4">D4</a>. Keep the black and gray valves CLOSED until you're ready to dump.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Close blinds.
+            <span class="note">Windshield privacy shade + front-cap shades; slide-out and bedroom last.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">08</span>
+          <span class="step-body">
+            Verify shore power is working properly.
+            <span class="note">Wait 30&ndash;45 s for the green EMS lights before switching on AC or any high-draw load. Rule: <a href="#section-electrical">Electrical &rsaquo; No green, no AC</a>.</span>
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================================================
+         COOK CAMP
+         ============================================================ -->
+    <section class="section" id="section-cook-camp" data-section="cook-camp" role="tabpanel">
+      <div class="section-head">
+        <h2>Cook Camp</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">Outdoor kitchen &middot; rugs, tables, grills, smoker &middot; from bays D2 / D3 / P2</div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">Where it lives, what to do</div>
+          <p>Everything for the outdoor kitchen lives in three bays. This is the layout first, then the setup order. Interior cupboards get their own section later.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Where It Lives</div>
+      <ul class="legend-list">
+        <li>
+          <a class="bay-chip" href="bays.html#D3">D3</a>
+          <span>Tables &middot; benches &middot; canopy</span>
+        </li>
+        <li>
+          <a class="bay-chip" href="bays.html#P2">P2</a>
+          <span>Rugs &middot; BBQ grill &middot; Blackstone griddle + table &middot; Green Mountain mini smoker &middot; smoker pellets</span>
+        </li>
+        <li>
+          <a class="bay-chip" href="bays.html#D2">D2</a>
+          <span>Grilling propane bottles &middot; fire pit</span>
+        </li>
+      </ul>
+
+      <div class="subhead">Setup Order</div>
+      <ol class="steps" data-steps="cook-camp-setup">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Roll out the rugs first &mdash; everything else stages on top.
+            <span class="note">From <a href="bays.html#P2">P2</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Raise the canopy.
+            <span class="note">From <a href="bays.html#D3">D3</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Set out tables and benches under the canopy.
+            <span class="note">From <a href="bays.html#D3">D3</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Assemble the Blackstone table + griddle in kitchen position.
+            <span class="note">From <a href="bays.html#P2">P2</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Position the BBQ grill.
+            <span class="note">From <a href="bays.html#P2">P2</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Set up the Green Mountain mini smoker; grab the pellet bag.
+            <span class="note">Smoker + pellets from <a href="bays.html#P2">P2</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Set up the fire pit at a safe distance from the canopy.
+            <span class="note">From <a href="bays.html#D2">D2</a>.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">08</span>
+          <span class="step-body">
+            Connect a grilling propane bottle to whichever unit you're using.
+            <span class="note">Bottles live in <a href="bays.html#D2">D2</a>. Snug hand-tight &mdash; no wrench on brass.</span>
+          </span>
+        </li>
+      </ol>
+
+      <div class="banner banner-verify" style="margin-top:18px;">
+        <span class="led green"></span>
+        <div class="banner-body">
+          <div class="banner-title">Teardown is this list in reverse</div>
+          <p>Propane off first, let grills cool, then break down in the reverse of setup. Rugs come up last so nothing gets stowed dirty.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          LEVELING
          ============================================================ -->
-    <section class="section" id="section-leveling" data-active="true" data-section="leveling" role="tabpanel">
+    <section class="section" id="section-leveling" data-section="leveling" role="tabpanel">
       <div class="section-head">
         <h2>Leveling</h2>
         <span class="meta" data-progress></span>

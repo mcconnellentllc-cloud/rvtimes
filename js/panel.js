@@ -52,18 +52,37 @@
     });
   }
 
+  function activateTab(target) {
+    if (!target) return;
+    const tabs = document.querySelectorAll('.tab');
+    let matched = false;
+    tabs.forEach((t) => {
+      const on = t.dataset.section === target;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) matched = true;
+    });
+    if (!matched) return;
+    document.querySelectorAll('.section').forEach((s) => {
+      s.dataset.active = s.dataset.section === target ? 'true' : 'false';
+    });
+  }
+
+  function activateFromHash() {
+    const hash = (window.location.hash || '').replace(/^#/, '');
+    if (!hash.startsWith('section-')) return;
+    activateTab(hash.slice('section-'.length));
+  }
+
   function initTabs() {
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
-        const target = tab.dataset.section;
-        tabs.forEach((t) => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
-        document.querySelectorAll('.section').forEach((s) => {
-          s.dataset.active = s.dataset.section === target ? 'true' : 'false';
-        });
+        activateTab(tab.dataset.section);
         window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
       });
     });
+    activateFromHash();
+    window.addEventListener('hashchange', activateFromHash);
   }
 
   function initReset() {

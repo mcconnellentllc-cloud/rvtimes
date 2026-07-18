@@ -683,6 +683,24 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
 }
 
+.bay-chip {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  padding: 3px 10px;
+  background: var(--bezel);
+  border: 1px solid var(--bezel-hi);
+  border-radius: 4px;
+  text-decoration: none;
+  min-width: 40px;
+  text-align: center;
+}
+.bay-chip:hover { background: var(--bezel-hi); text-decoration: none; }
+.legend-list li .bay-chip { min-width: 44px; }
+
 .steps {
   list-style: none;
   margin: 0;
