@@ -33,9 +33,98 @@
       </div>
       <div class="section-sub">RVA Model J-II &middot; 3 hydraulic rams &middot; under couch + D2 bay</div>
 
-      <figure class="panel-photo">
-        <img src="/images/leveling-panel.jpg" alt="RVA leveling panel"
-             onerror="this.parentElement.style.display='none'">
+      <figure class="panel-diagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" role="img" aria-labelledby="lvl-title lvl-desc">
+          <title id="lvl-title">RVA Model J-II leveling panel</title>
+          <desc id="lvl-desc">Schematic of the leveling panel: status LEDs (READY green, LEVEL amber, JACKS DOWN red), SYSTEM on/off, AIR DUMP rocker, bubble level, and LEFT/FRONT/RIGHT jack controls.</desc>
+          <defs>
+            <linearGradient id="lvl-bezel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2f3a3f"/>
+              <stop offset="1" stop-color="#161d20"/>
+            </linearGradient>
+            <linearGradient id="lvl-inner" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12181a"/>
+              <stop offset="1" stop-color="#0a0e0f"/>
+            </linearGradient>
+            <radialGradient id="lvl-green" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#a8ffbf"/>
+              <stop offset="0.55" stop-color="#2ee06a"/>
+              <stop offset="1" stop-color="#0d5e2a"/>
+            </radialGradient>
+            <radialGradient id="lvl-amber" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffe1a3"/>
+              <stop offset="0.55" stop-color="#ffb020"/>
+              <stop offset="1" stop-color="#5c3a00"/>
+            </radialGradient>
+            <radialGradient id="lvl-red" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffb0a3"/>
+              <stop offset="0.55" stop-color="#ff4a3d"/>
+              <stop offset="1" stop-color="#5a1a10"/>
+            </radialGradient>
+            <filter id="lvl-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3.5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <rect x="4" y="4" width="792" height="462" rx="14" fill="url(#lvl-bezel)" stroke="#3a464b"/>
+          <rect x="20" y="20" width="760" height="430" rx="10" fill="url(#lvl-inner)" stroke="#232c30"/>
+
+          <text x="40" y="58" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#d8dee1">RVA MODEL J-II</text>
+          <text x="40" y="80" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#5a6367">LEVELING SYSTEM</text>
+          <text x="760" y="80" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">3 RAM &middot; HYDRAULIC</text>
+          <line x1="40" y1="98" x2="760" y2="98" stroke="#1a2124"/>
+
+          <circle cx="130" cy="140" r="11" fill="url(#lvl-green)" filter="url(#lvl-glow)"/>
+          <text x="152" y="145" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="2" fill="#d8dee1">READY</text>
+          <circle cx="360" cy="140" r="11" fill="url(#lvl-amber)" filter="url(#lvl-glow)"/>
+          <text x="382" y="145" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="2" fill="#d8dee1">LEVEL</text>
+          <circle cx="560" cy="140" r="11" fill="url(#lvl-red)" filter="url(#lvl-glow)"/>
+          <text x="582" y="145" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="2" fill="#d8dee1">JACKS DOWN</text>
+
+          <rect x="60" y="185" width="150" height="100" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="135" y="205" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">SYSTEM</text>
+          <rect x="85" y="215" width="100" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="135" y="233" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#2ee06a">ON</text>
+          <rect x="85" y="248" width="100" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="135" y="266" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#5a6367">OFF</text>
+
+          <rect x="260" y="185" width="280" height="100" rx="7" fill="#0a0e0f" stroke="#232c30"/>
+          <text x="400" y="205" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">BUBBLE LEVEL</text>
+          <circle cx="400" cy="245" r="34" fill="none" stroke="#1a2124"/>
+          <circle cx="400" cy="245" r="20" fill="none" stroke="#1a2124"/>
+          <line x1="290" y1="245" x2="510" y2="245" stroke="#1a2124"/>
+          <line x1="400" y1="220" x2="400" y2="278" stroke="#1a2124"/>
+          <circle cx="400" cy="245" r="7" fill="#2ee06a" opacity="0.9" filter="url(#lvl-glow)"/>
+
+          <rect x="590" y="185" width="150" height="100" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="665" y="205" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">AIR DUMP</text>
+          <rect x="610" y="222" width="110" height="46" rx="6" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="665" y="242" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#d8dee1">DUMP</text>
+          <path d="M645 253 L665 262 L685 253 Z" fill="#8a969b"/>
+
+          <rect x="120" y="325" width="160" height="105" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="200" y="345" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">LEFT</text>
+          <rect x="140" y="358" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="200" y="376" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#d8dee1">EXTEND</text>
+          <rect x="140" y="392" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="200" y="410" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">RETRACT</text>
+
+          <rect x="320" y="325" width="160" height="105" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="400" y="345" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">FRONT</text>
+          <rect x="340" y="358" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="400" y="376" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#d8dee1">EXTEND</text>
+          <rect x="340" y="392" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="400" y="410" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">RETRACT</text>
+
+          <rect x="520" y="325" width="160" height="105" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="600" y="345" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">RIGHT</text>
+          <rect x="540" y="358" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="600" y="376" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#d8dee1">EXTEND</text>
+          <rect x="540" y="392" width="120" height="26" rx="4" fill="#12181a" stroke="#2f3a3f"/>
+          <text x="600" y="410" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">RETRACT</text>
+        </svg>
+        <figcaption class="panel-diagram-cap">Panel layout &mdash; schematic</figcaption>
       </figure>
 
       <div class="banner banner-danger">

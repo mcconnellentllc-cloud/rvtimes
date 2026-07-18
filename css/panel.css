@@ -169,19 +169,29 @@ a:hover { text-decoration: underline; }
 }
 .subhead:first-child { margin-top: 0; }
 
-.panel-photo {
+.panel-diagram {
   margin: 0 0 18px;
   border: 1px solid var(--bezel);
   border-radius: 8px;
   overflow: hidden;
-  background: var(--bg-elev);
+  background:
+    radial-gradient(ellipse at top, rgba(74, 182, 255, 0.04), transparent 60%),
+    linear-gradient(180deg, #12181a, #0a0e0f);
+  padding: 10px;
 }
-.panel-photo img {
+.panel-diagram svg {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 340px;
-  object-fit: cover;
+}
+.panel-diagram-cap {
+  padding: 8px 10px 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  text-align: center;
 }
 
 .banner {
