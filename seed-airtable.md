@@ -126,6 +126,17 @@ Status:   Upcoming
 Notes:    Latch type not yet confirmed.
 ```
 
+Row 9
+```
+Date:
+Service:  Onan generator — exhaust cleanout / spark-arrestor blow-out
+Mileage:
+Cost:
+Vendor:
+Status:   Due
+Notes:    Currently running erratic — suspect carbon in muffler. Cool 30 min, remove muffler cleanout plug (11/16" or 7/16" typical, verify), run at FULL load for 5 min with plug out, reinstall. Do NOT force plug if brass. Interval: 250 hr / annual — do with oil change. Full steps in Guide > Generator.
+```
+
 ---
 
 ## Table 2 — `Parts Inventory`

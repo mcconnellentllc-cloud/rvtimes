@@ -35,6 +35,7 @@
       <button class="tab" role="tab" aria-selected="false" data-section="awning">Awning</button>
       <button class="tab" role="tab" aria-selected="false" data-section="leveling">Leveling</button>
       <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="generator">Generator</button>
       <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
       <button class="tab" role="tab" aria-selected="false" data-section="plumbing">Plumbing</button>
     </nav>
@@ -803,6 +804,159 @@
         <div class="banner-body">
           <div class="banner-title">The rule</div>
           <p>No green, no AC. Flipping a big load too early can trip the panel and you start over.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GENERATOR (Onan)
+         ============================================================ -->
+    <section class="section" id="section-generator" data-section="generator" role="tabpanel">
+      <div class="section-head">
+        <h2>Generator</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">Onan &middot; exhaust cleanout &middot; 250 hr / annual service</div>
+
+      <div class="banner banner-warning">
+        <span class="led amber"></span>
+        <div class="banner-body">
+          <div class="banner-title">Running erratically? Suspect carbon in the muffler</div>
+          <p>Onan gensets accumulate carbon in the muffler and spark-arrestor screen. Symptoms are rough, hunting, or erratic running. The <strong>blow-out procedure</strong> below &mdash; run the generator at full load for 5 minutes with the cleanout plug removed &mdash; usually restores smooth running.</p>
+        </div>
+      </div>
+
+      <div class="banner banner-danger">
+        <span class="led red"></span>
+        <div class="banner-body">
+          <div class="banner-title">Cool it first, and if the plug is brass, don't force it</div>
+          <p>Never wrench on a hot generator. The muffler exceeds 400&deg;F under load. Wait at least 30 minutes after shutdown. If the cleanout plug is brass, use a 6-point socket &mdash; forcing a rounded plug strips it and turns a 15-minute job into a hardware-store errand.</p>
+        </div>
+      </div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">Model &middot; plug size &middot; torque &mdash; TBD</div>
+          <p>Common Onan cleanout plug sizes: <strong>11/16"</strong> or <strong>7/16"</strong> hex (some models 3/4"). Verify with a test-fit before you crank. Send me the Onan model number (nameplate on the genset body, usually visible with the top cover open) and I'll drop the exact plug size, torque spec, and rated kW load into the steps below.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Blow-Out Cleanout (Primary Fix)</div>
+      <ol class="steps" data-steps="generator-blowout">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Cool the generator &mdash; at least 30 minutes after last run.
+            <span class="note">Test with the back of your hand near (not on) the muffler shroud.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Remove the top access cover on the generator housing to reach the muffler.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Locate the cleanout plug on the muffler body.
+            <span class="note">Test-fit 11/16" first, then 7/16" (or 3/4"). Use a 6-point socket if it looks brass.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Loosen and remove the plug. Set it in the toolbox &mdash; not the ground.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Load the coach up &mdash; both roof A/Cs on, water heater on electric, microwave running.
+            <span class="note">Goal: draw near the genset's rated output so exhaust velocity is high.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Start the generator. Run for a full 5 minutes with the plug OUT.
+            <span class="note">Expect black smoke and soot out the cleanout port &mdash; that IS the fix.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Shut down. Let cool 10&ndash;15 minutes before touching the plug area again.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">08</span>
+          <span class="step-body">
+            Reinstall the plug. Snug plus a firm quarter-turn.
+            <span class="note">If you have the torque spec (send the Onan model!), use it. Never lean on a brass plug.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">09</span>
+          <span class="step-body">
+            Restart and verify: smooth idle, no exhaust leak at the plug.
+            <span class="note">If in doubt, dab soapy water around the plug and look for bubbles.</span>
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Spark Arrestor Screen (Alternative / Additional)</div>
+      <ol class="steps" data-steps="generator-arrestor">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">Cool the generator &mdash; same 30-minute wait.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">Locate the spark-arrestor screen bracket at the tailpipe.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">Remove the retaining screws, pull the bracket + screen off.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">Wire-brush the screen from both sides until the carbon is off.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Inspect the screen for cracks or missing wire.
+            <span class="note">Damaged screen &rarr; replace, don't reuse. It's a spark arrestor for a reason.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">Reinstall the bracket and screws. Restart and confirm normal operation.</span>
+        </li>
+      </ol>
+
+      <div class="banner banner-verify" style="margin-top:18px;">
+        <span class="led green"></span>
+        <div class="banner-body">
+          <div class="banner-title">Interval that keeps it healthy</div>
+          <p>Onan calls for spark-arrestor service every <strong>250 running hours</strong> or <strong>once a year</strong>, whichever comes first &mdash; same interval as the engine oil change. When it's due, do both.</p>
         </div>
       </div>
     </section>

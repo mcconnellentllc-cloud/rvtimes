@@ -55,6 +55,26 @@
       a: "The transfer case must reach SOLID neutral (hold the dial to N 10+ sec until the light is solid; verify by shifting R then D with zero movement). Steering stays free only with ignition in ACC and the fob removed — never turn it fully OFF while towing or the wheel locks and grinds the tires. Battery cutoff OPEN while towing.",
       tags: ["flat-tow", "escalade", "transfer case", "towing", "safety"],
     },
+    {
+      q: "Onan generator runs rough / erratic — where do I look first?",
+      a: "Suspect carbon buildup in the muffler and spark-arrestor screen. Onan's fix is a blow-out: cool the generator 30 min, remove the top cover and the muffler cleanout plug (typically 11/16\" or 7/16\" hex — some models 3/4\"), then run the coach at full load (both roof A/Cs, water heater on electric, microwave) for 5 minutes with the plug OUT. Expect black smoke — that's the carbon leaving. Shut down, cool, reinstall the plug. If the plug is brass, use a 6-point socket and don't over-torque. Full procedure: Guide > Generator. Onan calls for this at 250 running hours or annually — same interval as the oil change.",
+      tags: ["generator", "onan", "exhaust", "cleanout", "spark arrestor", "carbon", "erratic", "rough"],
+    },
+    {
+      q: "How often should the Onan spark arrestor / exhaust cleanout be serviced?",
+      a: "Every 250 running hours OR once a year, whichever comes first. It's the same interval as the engine oil change, so when one is due, do both.",
+      tags: ["generator", "onan", "maintenance", "interval", "spark arrestor"],
+    },
+    {
+      q: "How is the coach awning powered and where's the switch?",
+      a: "Two controls. A key switch enables power to the awning motor — the key lives on the RV key ring, stored in the cupboard above the driver's seat. A separate rocker inside the entry stairwell drives the awning in or out. Key must be ON before the rocker does anything. Full procedure and safety rules: Guide > Awning.",
+      tags: ["awning", "key", "stairwell", "controls"],
+    },
+    {
+      q: "Can I leave the coach awning out overnight or in wind?",
+      a: "Never in wind, and never unattended in weather. High wind rips the fabric and can tear the arms off the coach — sometimes with roof damage. Rule of thumb: any doubt about wind now or forecast, or heading to bed — retract. A retracted awning has never been damaged by wind. Arms are also sticky and often take 2-3 people with gentle assistance to run in or out; never force.",
+      tags: ["awning", "wind", "safety", "damage"],
+    },
   ];
 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
