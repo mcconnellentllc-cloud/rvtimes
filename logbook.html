@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <title>Diplomat &mdash; Logbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/panel.css">
+  <link rel="stylesheet" href="/css/logbook.css">
+</head>
+<body>
+  <div id="gate" class="gate">
+    <h1>Logbook Access</h1>
+    <div class="hint">Enter PIN</div>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="off" maxlength="16">
+    <button id="unlock" class="go">Unlock</button>
+    <div id="gate-err" class="err"></div>
+  </div>
+
+  <main id="app" class="panel" hidden>
+    <header class="masthead">
+      <h1>Diplomat Logbook</h1>
+      <div class="sub">Service &amp; Parts &middot; Airtable</div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Logbook views">
+      <button class="tab" role="tab" aria-selected="true"  data-view="service">Service &amp; Cost</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="parts">Parts Inventory</button>
+    </nav>
+
+    <section class="view" id="view-service" data-view="service" data-active="true" role="tabpanel">
+      <div class="stats">
+        <div class="stat"><div class="k">Total Spent</div><div class="v" id="stat-total">&mdash;</div></div>
+        <div class="stat"><div class="k">Last Mileage</div><div class="v" id="stat-mileage">&mdash;</div></div>
+        <div class="stat"><div class="k">Entries</div><div class="v" id="stat-count">&mdash;</div></div>
+      </div>
+      <div class="toolbar">
+        <div></div>
+        <div class="actions">
+          <button class="btn ghost" id="service-refresh">Refresh</button>
+          <button class="btn" id="service-add">+ Add Entry</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="log" id="service-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th class="num">Mileage</th>
+              <th class="num">Cost</th>
+              <th>Vendor</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="empty" id="service-empty" hidden>No service entries yet.</div>
+      </div>
+    </section>
+
+    <section class="view" id="view-parts" data-view="parts" role="tabpanel">
+      <div class="stats">
+        <div class="stat"><div class="k">Parts</div><div class="v" id="stat-parts">&mdash;</div></div>
+        <div class="stat warn"><div class="k">Low / Out</div><div class="v" id="stat-lowout">&mdash;</div></div>
+      </div>
+      <div class="toolbar">
+        <div></div>
+        <div class="actions">
+          <button class="btn ghost" id="parts-refresh">Refresh</button>
+          <button class="btn" id="parts-add">+ Add Part</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="log" id="parts-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>Category</th>
+              <th>Qty</th>
+              <th>Location</th>
+              <th>Part #</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="empty" id="parts-empty" hidden>No parts tracked yet.</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Data: Airtable</span>
+      <button class="reset-btn" id="lock">Lock</button>
+    </footer>
+  </main>
+
+  <div class="dialog-backdrop" id="dlg-service">
+    <div class="dialog">
+      <h3>New Service Entry</h3>
+      <form id="form-service">
+        <div class="field row">
+          <div><label>Date</label><input name="Date" type="date" required></div>
+          <div><label>Mileage</label><input name="Mileage" type="number" inputmode="numeric" min="0"></div>
+        </div>
+        <div class="field"><label>Type</label><input name="Type" type="text" placeholder="Oil change, tires, brakes&hellip;"></div>
+        <div class="field"><label>Description</label><textarea name="Description"></textarea></div>
+        <div class="field row">
+          <div><label>Cost ($)</label><input name="Cost" type="number" inputmode="decimal" min="0" step="0.01"></div>
+          <div><label>Vendor</label><input name="Vendor" type="text"></div>
+        </div>
+        <div class="field"><label>Notes</label><textarea name="Notes"></textarea></div>
+        <div class="dialog-actions">
+          <button type="button" class="btn ghost" data-close>Cancel</button>
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="dialog-backdrop" id="dlg-parts">
+    <div class="dialog">
+      <h3>New Part</h3>
+      <form id="form-parts">
+        <div class="field"><label>Part</label><input name="Part" type="text" required></div>
+        <div class="field row">
+          <div><label>Category</label><input name="Category" type="text"></div>
+          <div><label>Qty</label><input name="Qty" type="number" inputmode="numeric" min="0" value="1"></div>
+        </div>
+        <div class="field row">
+          <div><label>Location</label><input name="Location" type="text"></div>
+          <div><label>Part #</label><input name="Part #" type="text"></div>
+        </div>
+        <div class="field"><label>Notes</label><textarea name="Notes"></textarea></div>
+        <div class="dialog-actions">
+          <button type="button" class="btn ghost" data-close>Cancel</button>
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+  <script src="/js/service-log.js"></script>
+  <script src="/js/parts-inventory.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.Auth.init({
+        onUnlock: () => {
+          window.ServiceLog.init();
+          window.PartsInventory.init();
+        }
+      });
+
+      const tabs = document.querySelectorAll('.tabs .tab');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.view;
+          tabs.forEach((t) => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
+          document.querySelectorAll('.view').forEach((v) => {
+            v.dataset.active = v.dataset.view === target ? 'true' : 'false';
+          });
+        });
+      });
+
+      document.querySelectorAll('.dialog-backdrop').forEach((dlg) => {
+        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.dataset.open = 'false'; });
+        dlg.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', () => dlg.dataset.open = 'false'));
+      });
+
+      document.getElementById('lock').addEventListener('click', () => window.Auth.lock());
+    });
+  </script>
+</body>
+</html>

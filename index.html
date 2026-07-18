@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <title>Monaco Diplomat &mdash; Field Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/panel.css">
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <h1>2001 Monaco Diplomat</h1>
+      <div class="sub">Operator Field Guide &middot; Rev A</div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Guide sections">
+      <button class="tab" role="tab" aria-selected="true"  data-section="leveling">Leveling</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
+    </nav>
+
+    <section class="section" id="section-leveling" data-active="true" data-section="leveling" role="tabpanel">
+      <div class="section-head">
+        <h2>Leveling Procedure</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <ol class="steps" data-steps="leveling">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Step placeholder &mdash; paste real leveling content here.
+            <span class="note">Tap this row to mark it complete. Progress is stored on this device.</span>
+          </span>
+        </li>
+      </ol>
+      <div class="legend">
+        <span class="legend-item"><span class="led amber"></span>Pending</span>
+        <span class="legend-item"><span class="led green"></span>Confirmed</span>
+        <span class="legend-item"><span class="led red"></span>Warning</span>
+        <span class="legend-item"><span class="led blue"></span>Note</span>
+      </div>
+    </section>
+
+    <section class="section" id="section-electrical" data-section="electrical" role="tabpanel">
+      <div class="section-head">
+        <h2>Electrical System</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <ol class="steps" data-steps="electrical">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Step placeholder &mdash; paste real electrical content here.
+            <span class="note">Shore power, inverter, generator, batteries.</span>
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="section-flat-tow" data-section="flat-tow" role="tabpanel">
+      <div class="section-head">
+        <h2>Flat-Tow Setup</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <ol class="steps" data-steps="flat-tow">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Step placeholder &mdash; paste real flat-tow content here.
+            <span class="note">Base plate, tow bar, safety cables, wiring, transmission.</span>
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <span>Monaco Diplomat &middot; Field Guide</span>
+      <button class="reset-btn" data-reset>Reset section</button>
+    </footer>
+  </main>
+
+  <script src="/js/panel.js"></script>
+</body>
+</html>
