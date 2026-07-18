@@ -70,7 +70,7 @@
 
   async function load() {
     try {
-      const data = await window.Auth.apiFetch('/api/service-log');
+      const data = await window.Auth.apiFetch('api/service-log');
       state.records = Array.isArray(data.records) ? data.records : [];
       render();
     } catch (e) {
@@ -96,7 +96,7 @@
     const fields = {};
     new FormData(form).forEach((v, k) => { if (v !== '' && v != null) fields[k] = v; });
     try {
-      const res = await window.Auth.apiFetch('/api/service-log', {
+      const res = await window.Auth.apiFetch('api/service-log', {
         method: 'POST',
         body: fields,
       });

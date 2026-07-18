@@ -57,7 +57,7 @@
   }
 
   async function patchQty(id, nextQty) {
-    return window.Auth.apiFetch('/api/parts-inventory', {
+    return window.Auth.apiFetch('api/parts-inventory', {
       method: 'PATCH',
       body: { id, fields: { Qty: nextQty } },
     });
@@ -116,7 +116,7 @@
 
   async function load() {
     try {
-      const data = await window.Auth.apiFetch('/api/parts-inventory');
+      const data = await window.Auth.apiFetch('api/parts-inventory');
       state.records = Array.isArray(data.records) ? data.records : [];
       render();
     } catch (e) {
@@ -137,7 +137,7 @@
     const fields = {};
     new FormData(form).forEach((v, k) => { if (v !== '' && v != null) fields[k] = v; });
     try {
-      const res = await window.Auth.apiFetch('/api/parts-inventory', {
+      const res = await window.Auth.apiFetch('api/parts-inventory', {
         method: 'POST',
         body: fields,
       });

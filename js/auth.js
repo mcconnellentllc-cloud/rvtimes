@@ -12,7 +12,7 @@
   }
 
   async function verifyPin(pin) {
-    const res = await fetch('/api/service-log', {
+    const res = await fetch('api/service-log', {
       method: 'GET',
       headers: { 'x-logbook-pin': pin },
     });
@@ -70,7 +70,42 @@
     }
   }
 
-  function init({ onUnlock } = {}) {
+  async function detectApi() {
+    try {
+      const res = await fetch('api/service-log', { method: 'GET' });
+      const ct = res.headers.get('content-type') || '';
+      return ct.includes('application/json');
+    } catch {
+      return false;
+    }
+  }
+
+  function showPreviewNotice() {
+    const gate = document.getElementById('gate');
+    if (!gate) return;
+    gate.innerHTML = `
+      <h1>Static Preview</h1>
+      <div class="hint">Logbook needs the API</div>
+      <p style="font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--ink-dim);margin:14px 0 20px;text-align:left;">
+        This page reads your maintenance and parts data from Airtable through
+        a server function. On a static-only host (like GitHub Pages) that
+        function isn't running, so there's nothing to load.
+      </p>
+      <p style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 20px;text-align:left;">
+        To turn it on: deploy to Vercel with AIRTABLE_TOKEN,
+        AIRTABLE_BASE_ID and LOGBOOK_PIN set.
+      </p>
+      <a href="index.html" class="go" style="display:block;text-decoration:none;text-align:center;">Back to Guide</a>
+    `;
+  }
+
+  async function init({ onUnlock } = {}) {
+    const apiOk = await detectApi();
+    if (!apiOk) {
+      showPreviewNotice();
+      return;
+    }
+
     const existing = getPin();
     if (existing) {
       verifyPin(existing).then((ok) => {
