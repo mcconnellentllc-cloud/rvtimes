@@ -129,12 +129,23 @@ Notes:    Latch type not yet confirmed.
 Row 9
 ```
 Date:
-Service:  Onan generator — exhaust cleanout / spark-arrestor blow-out
+Service:  Onan Quiet Diesel 7500 — wet-stacking recovery run (running erratic)
 Mileage:
 Cost:
 Vendor:
 Status:   Due
-Notes:    Currently running erratic — suspect carbon in muffler. Cool 30 min, remove muffler cleanout plug (11/16" or 7/16" typical, verify), run at FULL load for 5 min with plug out, reinstall. Do NOT force plug if brass. Interval: 250 hr / annual — do with oil change. Full steps in Guide > Generator.
+Notes:    Cummins Onan 7.5HDKAJ. Symptom: rough/erratic. Cause on diesel = wet stacking from under-loading. Fix: run 1-2 hr at 60-95% load — both roof A/Cs + water heater + microwave. Should smooth out and stop smoking. Prevention: exercise MONTHLY at 50%+ load for 1 hr. NOT a spark-arrestor blow-out — this is diesel, no arrestor. Full steps in Guide > Generator. Hours at last read: 2252.4.
+```
+
+Row 10
+```
+Date:
+Service:  Onan HDKAJ — oil + oil filter change (250 hr / annual)
+Mileage:
+Cost:
+Vendor:
+Status:   Upcoming
+Notes:    3 qt with filter, API CE, 15W-40. Oil filter 185-5409, fuel filter 149-2513 (do at same interval), air cleaner 140-2897.
 ```
 
 ---
@@ -210,6 +221,46 @@ Qty:       0
 Location:
 Part #:    255/70R22.5 LR-H
 Notes:     Full matched set needed
+```
+
+Row 7
+```
+Part:      Onan HDKAJ oil filter
+Category:  Generator
+Qty:       0
+Location:  P5
+Part #:    185-5409
+Notes:     Diesel Onan Quiet Diesel 7500. Change every 250 hr / annual.
+```
+
+Row 8
+```
+Part:      Onan HDKAJ fuel filter
+Category:  Generator
+Qty:       0
+Location:  P5
+Part #:    149-2513
+Notes:     Change with oil filter.
+```
+
+Row 9
+```
+Part:      Onan HDKAJ air cleaner
+Category:  Generator
+Qty:       0
+Location:  P5
+Part #:    140-2897
+Notes:     Inspect at each service; replace when dirty.
+```
+
+Row 10
+```
+Part:      Diesel engine oil, 15W-40 API CE
+Category:  Generator
+Qty:       0
+Location:  P5
+Part #:
+Notes:     Genset takes 3 qt w/filter. Stock 1 gal for one change + top-off.
 ```
 
 ---

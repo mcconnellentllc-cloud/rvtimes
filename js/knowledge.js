@@ -56,14 +56,24 @@
       tags: ["flat-tow", "escalade", "transfer case", "towing", "safety"],
     },
     {
-      q: "Onan generator runs rough / erratic — where do I look first?",
-      a: "Suspect carbon buildup in the muffler and spark-arrestor screen. Onan's fix is a blow-out: cool the generator 30 min, remove the top cover and the muffler cleanout plug (typically 11/16\" or 7/16\" hex — some models 3/4\"), then run the coach at full load (both roof A/Cs, water heater on electric, microwave) for 5 minutes with the plug OUT. Expect black smoke — that's the carbon leaving. Shut down, cool, reinstall the plug. If the plug is brass, use a 6-point socket and don't over-torque. Full procedure: Guide > Generator. Onan calls for this at 250 running hours or annually — same interval as the oil change.",
-      tags: ["generator", "onan", "exhaust", "cleanout", "spark arrestor", "carbon", "erratic", "rough"],
+      q: "Onan Quiet Diesel 7500 runs rough / erratic — what's the fix?",
+      a: "Almost always wet stacking. This is a Cummins Onan 7.5HDKAJ diesel; when it's run under-loaded, unburned fuel and soot build up and the engine hunts / misses / smokes. Diesel engines need load. Fix: run at 60–95% of rated 7.5 kW (both roof A/Cs on, water heater on electric, microwave) for 1–2 hours. The engine should smooth out and the exhaust smoke should clear as heat builds and the residue burns off. There is NO spark-arrestor cleanout plug on this diesel — that's a gas-Onan procedure. Prevention: exercise the genset monthly at 50%+ load for at least an hour. Full procedure: Guide > Generator.",
+      tags: ["generator", "onan", "quiet diesel", "hdkaj", "wet stacking", "erratic", "rough", "diesel", "load"],
     },
     {
-      q: "How often should the Onan spark arrestor / exhaust cleanout be serviced?",
-      a: "Every 250 running hours OR once a year, whichever comes first. It's the same interval as the engine oil change, so when one is due, do both.",
-      tags: ["generator", "onan", "maintenance", "interval", "spark arrestor"],
+      q: "Onan HDKAJ maintenance intervals and part numbers?",
+      a: "Cummins Onan 7.5HDKAJ Quiet Diesel 7500. Oil + oil filter every 250 running hours or annually, whichever first. 3 qt with filter, API CE grade. Viscosity 15W-40 for 5–120°F; 10W-30 for -13–68°F; 5W-30 for -40–68°F. Part numbers from the panel plate: air cleaner 140-2897, oil filter 185-5409, fuel filter 149-2513. Do fuel + air filters and coolant check at the same interval.",
+      tags: ["generator", "onan", "hdkaj", "maintenance", "interval", "oil", "filter", "part numbers"],
+    },
+    {
+      q: "How do I start the Onan diesel generator?",
+      a: "It's a diesel with a glow-plug preheat cycle. Rotary switch on the coach panel to ON, then press and HOLD Start/Preheat. The red LED indicates preheat running — hold 5–15 seconds (longer when cold) until the engine catches, then release. Let it idle 30–60 seconds before adding load. To stop: shed load, idle 30–60 seconds for turbo cooldown, press Stop, rotary to OFF. Full procedure: Guide > Generator.",
+      tags: ["generator", "onan", "diesel", "start", "preheat", "glow plug", "stop"],
+    },
+    {
+      q: "What do the Onan generator indicator flash codes mean?",
+      a: "On the coach panel indicator: 1 rapid = preheat active (normal during start). 2 rapid = high engine temperature — shed load, check coolant and airflow. 3 rapid = low oil pressure — STOP immediately and check oil level. Slow flashing = service required, see the service manual.",
+      tags: ["generator", "onan", "flash codes", "indicator", "preheat", "high temp", "low oil pressure"],
     },
     {
       q: "How is the coach awning powered and where's the switch?",
