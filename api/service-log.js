@@ -2,7 +2,8 @@ import { listRecords, createRecord } from './_lib/airtable.js';
 import { requirePin, sendError } from './_lib/auth.js';
 
 const TABLE = 'Service Log';
-const ALLOWED_FIELDS = ['Date', 'Type', 'Description', 'Mileage', 'Cost', 'Vendor', 'Notes'];
+const ALLOWED_FIELDS = ['Date', 'Service', 'Mileage', 'Cost', 'Vendor', 'Status', 'Notes'];
+const STATUS_VALUES = ['Done', 'Upcoming', 'Due'];
 
 function pickFields(body) {
   const out = {};
@@ -11,6 +12,7 @@ function pickFields(body) {
   }
   if (out.Mileage !== undefined) out.Mileage = Number(out.Mileage);
   if (out.Cost !== undefined) out.Cost = Number(out.Cost);
+  if (out.Status !== undefined && !STATUS_VALUES.includes(out.Status)) delete out.Status;
   return out;
 }
 

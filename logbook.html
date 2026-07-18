@@ -22,8 +22,18 @@
 
   <main id="app" class="panel" hidden>
     <header class="masthead">
-      <h1>Diplomat Logbook</h1>
-      <div class="sub">Service &amp; Parts &middot; Airtable</div>
+      <div class="mast-row">
+        <div>
+          <h1>Diplomat Logbook</h1>
+          <div class="sub">Service &amp; Parts &middot; Airtable</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+          <a href="/">Guide</a>
+          <a href="/specs">Specs</a>
+          <a href="/knowledge">Knowledge</a>
+          <a href="/logbook" class="active">Logbook</a>
+        </nav>
+      </div>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Logbook views">
@@ -36,6 +46,7 @@
         <div class="stat"><div class="k">Total Spent</div><div class="v" id="stat-total">&mdash;</div></div>
         <div class="stat"><div class="k">Last Mileage</div><div class="v" id="stat-mileage">&mdash;</div></div>
         <div class="stat"><div class="k">Entries</div><div class="v" id="stat-count">&mdash;</div></div>
+        <div class="stat"><div class="k">Due Now</div><div class="v" id="stat-due">&mdash;</div></div>
       </div>
       <div class="toolbar">
         <div></div>
@@ -49,11 +60,11 @@
           <thead>
             <tr>
               <th>Date</th>
-              <th>Type</th>
-              <th>Description</th>
+              <th>Service</th>
               <th class="num">Mileage</th>
               <th class="num">Cost</th>
               <th>Vendor</th>
+              <th>Status</th>
               <th>Notes</th>
             </tr>
           </thead>
@@ -107,11 +118,17 @@
           <div><label>Date</label><input name="Date" type="date" required></div>
           <div><label>Mileage</label><input name="Mileage" type="number" inputmode="numeric" min="0"></div>
         </div>
-        <div class="field"><label>Type</label><input name="Type" type="text" placeholder="Oil change, tires, brakes&hellip;"></div>
-        <div class="field"><label>Description</label><textarea name="Description"></textarea></div>
+        <div class="field"><label>Service</label><textarea name="Service" placeholder="What was done"></textarea></div>
         <div class="field row">
           <div><label>Cost ($)</label><input name="Cost" type="number" inputmode="decimal" min="0" step="0.01"></div>
           <div><label>Vendor</label><input name="Vendor" type="text"></div>
+        </div>
+        <div class="field"><label>Status</label>
+          <select name="Status">
+            <option value="Done">Done</option>
+            <option value="Upcoming">Upcoming</option>
+            <option value="Due">Due</option>
+          </select>
         </div>
         <div class="field"><label>Notes</label><textarea name="Notes"></textarea></div>
         <div class="dialog-actions">

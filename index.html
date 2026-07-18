@@ -13,14 +13,25 @@
 <body>
   <main class="panel">
     <header class="masthead">
-      <h1>2001 Monaco Diplomat</h1>
-      <div class="sub">Operator Field Guide &middot; Rev A</div>
+      <div class="mast-row">
+        <div>
+          <h1>2001 Monaco Diplomat</h1>
+          <div class="sub">Operator Field Guide &middot; Rev A</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+          <a href="/" class="active">Guide</a>
+          <a href="/specs">Specs</a>
+          <a href="/knowledge">Knowledge</a>
+          <a href="/logbook">Logbook</a>
+        </nav>
+      </div>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Guide sections">
       <button class="tab" role="tab" aria-selected="true"  data-section="leveling">Leveling</button>
       <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
       <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="plumbing">Plumbing</button>
     </nav>
 
     <!-- ============================================================
@@ -218,31 +229,137 @@
     </section>
 
     <!-- ============================================================
-         ELECTRICAL (placeholder)
+         ELECTRICAL
          ============================================================ -->
     <section class="section" id="section-electrical" data-section="electrical" role="tabpanel">
       <div class="section-head">
-        <h2>Electrical</h2>
+        <h2>Electrical &mdash; Power Up</h2>
         <span class="meta" data-progress></span>
       </div>
-      <div class="section-sub">Shore power &middot; Inverter &middot; Generator &middot; Batteries</div>
+      <div class="section-sub">Intellitec Model 750 Smart EMS &middot; 50 A shore &middot; Trace L1512 inverter</div>
 
-      <div class="banner banner-info">
-        <span class="led blue"></span>
+      <figure class="panel-diagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="ems-title ems-desc">
+          <title id="ems-title">Intellitec Model 750 Smart EMS panel</title>
+          <desc id="ems-desc">Schematic of the EMS panel showing shore-power status, the settling countdown, the READY (green) indicator, and load-management LEDs for AC, water heater, and microwave.</desc>
+          <defs>
+            <linearGradient id="ems-bezel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2f3a3f"/>
+              <stop offset="1" stop-color="#161d20"/>
+            </linearGradient>
+            <linearGradient id="ems-inner" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12181a"/>
+              <stop offset="1" stop-color="#0a0e0f"/>
+            </linearGradient>
+            <radialGradient id="ems-green" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#a8ffbf"/>
+              <stop offset="0.55" stop-color="#2ee06a"/>
+              <stop offset="1" stop-color="#0d5e2a"/>
+            </radialGradient>
+            <radialGradient id="ems-amber" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffe1a3"/>
+              <stop offset="0.55" stop-color="#ffb020"/>
+              <stop offset="1" stop-color="#5c3a00"/>
+            </radialGradient>
+            <radialGradient id="ems-off" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#1c2427"/>
+              <stop offset="1" stop-color="#0a0e0f"/>
+            </radialGradient>
+            <filter id="ems-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3.5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <rect x="4" y="4" width="792" height="372" rx="14" fill="url(#ems-bezel)" stroke="#3a464b"/>
+          <rect x="20" y="20" width="760" height="340" rx="10" fill="url(#ems-inner)" stroke="#232c30"/>
+
+          <text x="40" y="58" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#d8dee1">INTELLITEC 750</text>
+          <text x="40" y="80" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#5a6367">SMART ENERGY MANAGEMENT</text>
+          <text x="760" y="80" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">50 A &middot; SHORE / GEN</text>
+          <line x1="40" y1="98" x2="760" y2="98" stroke="#1a2124"/>
+
+          <rect x="40" y="120" width="220" height="100" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="150" y="140" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">SHORE / GEN</text>
+          <circle cx="80" cy="170" r="9" fill="url(#ems-amber)" filter="url(#ems-glow)"/>
+          <text x="98" y="174" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#d8dee1">30 A</text>
+          <circle cx="80" cy="200" r="9" fill="url(#ems-green)" filter="url(#ems-glow)"/>
+          <text x="98" y="204" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#d8dee1">50 A</text>
+          <text x="230" y="204" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">POWER</text>
+
+          <rect x="290" y="120" width="220" height="100" rx="7" fill="#0a0e0f" stroke="#232c30"/>
+          <text x="400" y="140" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">SYSTEM STATUS</text>
+          <circle cx="400" cy="180" r="16" fill="url(#ems-green)" filter="url(#ems-glow)"/>
+          <text x="400" y="211" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="3" fill="#2ee06a">READY</text>
+
+          <rect x="540" y="120" width="220" height="100" rx="7" fill="#161d20" stroke="#2f3a3f"/>
+          <text x="650" y="140" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">SETTLING (30&ndash;45 s)</text>
+          <rect x="558" y="158" width="184" height="10" rx="3" fill="#0a0e0f" stroke="#1a2124"/>
+          <rect x="558" y="158" width="70" height="10" rx="3" fill="url(#ems-amber)" filter="url(#ems-glow)"/>
+          <text x="558" y="200" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">HOLD ALL LOADS</text>
+
+          <line x1="40" y1="250" x2="760" y2="250" stroke="#1a2124"/>
+          <text x="40" y="278" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">HIGH-DRAW LOADS</text>
+
+          <g font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#d8dee1">
+            <rect x="40" y="295" width="220" height="45" rx="6" fill="#161d20" stroke="#2f3a3f"/>
+            <circle cx="70" cy="317" r="7" fill="url(#ems-off)"/>
+            <text x="90" y="321">ROOF AC 1</text>
+            <text x="250" y="321" text-anchor="end" fill="#5a6367">HOLD</text>
+
+            <rect x="290" y="295" width="220" height="45" rx="6" fill="#161d20" stroke="#2f3a3f"/>
+            <circle cx="320" cy="317" r="7" fill="url(#ems-off)"/>
+            <text x="340" y="321">MICROWAVE</text>
+            <text x="500" y="321" text-anchor="end" fill="#5a6367">HOLD</text>
+
+            <rect x="540" y="295" width="220" height="45" rx="6" fill="#161d20" stroke="#2f3a3f"/>
+            <circle cx="570" cy="317" r="7" fill="url(#ems-off)"/>
+            <text x="590" y="321">WATER HEATER</text>
+            <text x="750" y="321" text-anchor="end" fill="#5a6367">HOLD</text>
+          </g>
+        </svg>
+        <figcaption class="panel-diagram-cap">Panel layout &mdash; schematic</figcaption>
+      </figure>
+
+      <div class="banner banner-warning">
+        <span class="led amber"></span>
         <div class="banner-body">
-          <div class="banner-title">Content pending</div>
-          <p>Paste the real electrical procedure here &mdash; shore hookup, transfer switch, inverter modes, generator start/stop, battery isolators.</p>
+          <div class="banner-title">Wait for the green lights first</div>
+          <p>When you connect shore power or start the generator, the electrical panel takes 30&ndash;45 seconds to come alive. Don't switch anything on during that delay &mdash; it protects the system.</p>
         </div>
       </div>
 
-      <div class="subhead">Placeholder</div>
-      <ol class="steps" data-steps="electrical">
+      <div class="subhead">Power Up</div>
+      <ol class="steps" data-steps="electrical-powerup">
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">01</span>
-          <span class="step-body">Step placeholder.</span>
+          <span class="step-body">Connect shore power OR start the generator.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">Wait 30&ndash;45 seconds. Don't touch any switches yet.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">Watch the panel for the green lights = system settled and ready.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">Only then turn on the roof AC or any high-draw item &mdash; microwave, water heater.</span>
         </li>
       </ol>
+
+      <div class="banner banner-verify" style="margin-top:18px;">
+        <span class="led green"></span>
+        <div class="banner-body">
+          <div class="banner-title">The rule</div>
+          <p>No green, no AC. Flipping a big load too early can trip the panel and you start over.</p>
+        </div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -409,6 +526,129 @@
           <p>Known GM behavior from the power cycle (bulletin PIP5217). Usually clears on its own or after a short drive.</p>
         </div>
       </div>
+    </section>
+
+    <!-- ============================================================
+         PLUMBING
+         ============================================================ -->
+    <section class="section" id="section-plumbing" data-section="plumbing" role="tabpanel">
+      <div class="section-head">
+        <h2>Plumbing &mdash; Shower Valve</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">Phoenix Faucets 4" two-handle &middot; PF213350 &middot; Lasco S-447-3NL stems</div>
+
+      <figure class="panel-diagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="plmb-title plmb-desc">
+          <title id="plmb-title">Phoenix 4-inch two-handle shower valve</title>
+          <desc id="plmb-desc">Schematic of the shower valve body showing hot and cold stems, the internal white plastic crossover tube (common failure), and the spout outlet.</desc>
+          <defs>
+            <linearGradient id="plmb-body" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2f3a3f"/>
+              <stop offset="1" stop-color="#161d20"/>
+            </linearGradient>
+            <linearGradient id="plmb-cross" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e6e6e0"/>
+              <stop offset="1" stop-color="#b8b8b0"/>
+            </linearGradient>
+            <filter id="plmb-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <rect x="4" y="4" width="792" height="332" rx="14" fill="#161d20" stroke="#3a464b"/>
+          <rect x="20" y="20" width="760" height="300" rx="10" fill="#0a0e0f" stroke="#232c30"/>
+
+          <text x="40" y="58" font-family="Archivo, sans-serif" font-weight="700" font-size="18" letter-spacing="3" fill="#d8dee1">PHOENIX 4-INCH VALVE</text>
+          <text x="40" y="78" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2" fill="#5a6367">TWO-HANDLE &middot; PF213350</text>
+          <line x1="40" y1="94" x2="760" y2="94" stroke="#1a2124"/>
+
+          <rect x="220" y="140" width="360" height="120" rx="8" fill="url(#plmb-body)" stroke="#3a464b"/>
+
+          <line x1="130" y1="200" x2="220" y2="200" stroke="#4ab6ff" stroke-width="6" opacity="0.8"/>
+          <text x="130" y="185" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#4ab6ff">COLD (BLUE)</text>
+          <line x1="580" y1="200" x2="670" y2="200" stroke="#ff4a3d" stroke-width="6" opacity="0.8"/>
+          <text x="670" y="185" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#ff4a3d">HOT (RED)</text>
+
+          <circle cx="280" cy="200" r="26" fill="#1a2124" stroke="#4a575c" stroke-width="2"/>
+          <circle cx="280" cy="200" r="10" fill="#4ab6ff"/>
+          <text x="280" y="115" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">COLD STEM</text>
+          <text x="280" y="130" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="1" fill="#5a6367">Lasco S-447-3NL</text>
+
+          <circle cx="520" cy="200" r="26" fill="#1a2124" stroke="#4a575c" stroke-width="2"/>
+          <circle cx="520" cy="200" r="10" fill="#ff4a3d"/>
+          <text x="520" y="115" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#8a969b">HOT STEM</text>
+          <text x="520" y="130" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="1" fill="#5a6367">Lasco S-447-3NL</text>
+
+          <rect x="310" y="230" width="180" height="14" rx="3" fill="url(#plmb-cross)" stroke="#8a8a80"/>
+          <line x1="335" y1="237" x2="345" y2="237" stroke="#ff4a3d" stroke-width="2"/>
+          <line x1="360" y1="237" x2="370" y2="237" stroke="#ff4a3d" stroke-width="2"/>
+          <line x1="405" y1="237" x2="415" y2="237" stroke="#ff4a3d" stroke-width="2"/>
+          <path d="M400 244 L400 260" stroke="#ff4a3d" stroke-width="2" stroke-dasharray="3 2"/>
+          <text x="400" y="285" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#ff4a3d">CRACKED CROSSOVER &mdash; COMMON FAILURE</text>
+
+          <rect x="380" y="260" width="40" height="24" fill="url(#plmb-body)" stroke="#3a464b"/>
+          <text x="750" y="273" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367">TO SPOUT / SHOWER HEAD</text>
+        </svg>
+        <figcaption class="panel-diagram-cap">Valve internals &mdash; schematic</figcaption>
+      </figure>
+
+      <div class="banner banner-danger">
+        <span class="led red"></span>
+        <div class="banner-body">
+          <div class="banner-title">A leak new stems won't fix</div>
+          <p>On the Phoenix 4-inch valve, if fresh Lasco S-447-3NL stems don't stop the drip, it's almost always the cracked white plastic crossover / manifold tube inside the valve &mdash; a classic failure on these. Fix is a full valve replacement (Phoenix PF213350), not just stems.</p>
+        </div>
+      </div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">Where the supply lines are</div>
+          <p>Red / blue PEX runs to the valve through the kitchen cabinet chase behind the galley &mdash; NOT a dedicated shower access panel (there isn't one in the factory manual).</p>
+        </div>
+      </div>
+
+      <div class="subhead">Replace The Valve</div>
+      <ol class="steps" data-steps="plumbing-replace">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">Shut water off at the pump AND the city inlet. Open the shower to bleed pressure.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Open the galley cabinet chase to reach the red / blue PEX runs.
+            <span class="note">No dedicated shower panel &mdash; go in through the kitchen.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">Pull trim, remove handles and escutcheons; unscrew and lift out the old Phoenix valve body.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Fit the new Phoenix PF213350 with SharkBite / PEX female adapters.
+            <span class="note">PTFE tape on threads. Hand-tight, then a quarter-turn &mdash; do NOT overtorque the plastic fittings.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">Charge the system slowly. Check both stems and every joint for weep. Cycle hot / cold a few times.</span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">Re-fit handles, escutcheons, trim. Confirm no drip after a 15-minute soak test.</span>
+        </li>
+      </ol>
     </section>
 
     <footer class="footer">

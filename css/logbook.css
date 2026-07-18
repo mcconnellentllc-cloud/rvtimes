@@ -196,6 +196,33 @@ table.log tr.low td:first-child { box-shadow: inset 3px 0 0 var(--red); }
   border: 1px solid var(--red);
 }
 
+.status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.status-done {
+  color: var(--green);
+  border-color: rgba(46, 224, 106, 0.35);
+  background: rgba(46, 224, 106, 0.06);
+}
+.status-upcoming {
+  color: var(--blue);
+  border-color: rgba(74, 182, 255, 0.30);
+  background: rgba(74, 182, 255, 0.05);
+}
+.status-due {
+  color: var(--red);
+  border-color: rgba(255, 74, 61, 0.40);
+  background: rgba(255, 74, 61, 0.06);
+}
+
 .empty {
   padding: 30px 16px;
   text-align: center;

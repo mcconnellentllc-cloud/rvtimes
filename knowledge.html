@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <title>Diplomat &mdash; Knowledge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/panel.css">
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <h1>Knowledge</h1>
+          <div class="sub">Troubleshooting &amp; how it works</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+          <a href="/">Guide</a>
+          <a href="/specs">Specs</a>
+          <a href="/knowledge" class="active">Knowledge</a>
+          <a href="/logbook">Logbook</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="kb-search">
+      <input id="kb-input" type="search" placeholder="Search question, answer, or tag&hellip;" autocomplete="off">
+      <button id="kb-clear" class="clear" type="button">Clear</button>
+    </div>
+    <div class="kb-meter" id="kb-meter"></div>
+    <div class="kb-list" id="kb-list"></div>
+    <div class="kb-empty" id="kb-empty" hidden>No matches.</div>
+
+    <template id="kb-item">
+      <article class="kb-card">
+        <h3 class="q"></h3>
+        <p class="a"></p>
+        <div class="kb-tags"></div>
+      </article>
+    </template>
+
+    <footer class="footer">
+      <span>Diplomat &middot; Knowledge</span>
+      <span id="kb-count"></span>
+    </footer>
+  </main>
+  <script src="/js/knowledge.js"></script>
+</body>
+</html>

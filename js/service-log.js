@@ -15,6 +15,16 @@
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
   ));
 
+  function statusBadge(status) {
+    if (!status) return '';
+    const s = String(status).trim();
+    const cls = s === 'Done' ? 'status-done'
+              : s === 'Due' ? 'status-due'
+              : s === 'Upcoming' ? 'status-upcoming'
+              : 'status-upcoming';
+    return `<span class="status ${cls}">${esc(s)}</span>`;
+  }
+
   function render() {
     const tbody = document.querySelector('#service-table tbody');
     const empty = document.getElementById('service-empty');
@@ -29,11 +39,11 @@
         const f = r.fields || {};
         return `<tr>
           <td>${esc(f['Date'] || '')}</td>
-          <td>${esc(f['Type'] || '')}</td>
-          <td>${esc(f['Description'] || '')}</td>
+          <td>${esc(f['Service'] || '')}</td>
           <td class="num">${fmtMiles(f['Mileage'])}</td>
           <td class="num">${f['Cost'] != null ? esc(fmtMoney(f['Cost'])) : ''}</td>
           <td>${esc(f['Vendor'] || '')}</td>
+          <td>${statusBadge(f['Status'])}</td>
           <td>${esc(f['Notes'] || '')}</td>
         </tr>`;
       }).join('');
@@ -49,6 +59,13 @@
     withMiles.sort((a, b) => String(b.d || '').localeCompare(String(a.d || '')));
     const lastMi = withMiles[0]?.m;
     document.getElementById('stat-mileage').textContent = Number.isFinite(lastMi) ? fmtMiles(lastMi) : '—';
+
+    const dueEl = document.getElementById('stat-due');
+    if (dueEl) {
+      const due = rows.filter((r) => r.fields?.['Status'] === 'Due').length;
+      dueEl.textContent = String(due);
+      dueEl.closest('.stat')?.classList.toggle('warn', due > 0);
+    }
   }
 
   async function load() {
@@ -66,10 +83,10 @@
     dlg.querySelector('form').reset();
     const dateInput = dlg.querySelector('input[name="Date"]');
     if (dateInput && !dateInput.value) {
-      const d = new Date();
-      const iso = d.toISOString().slice(0, 10);
-      dateInput.value = iso;
+      dateInput.value = new Date().toISOString().slice(0, 10);
     }
+    const statusInput = dlg.querySelector('select[name="Status"]');
+    if (statusInput) statusInput.value = 'Done';
     dlg.dataset.open = 'true';
   }
 
