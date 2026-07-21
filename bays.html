@@ -32,7 +32,7 @@
     <figure class="panel-diagram">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 320" role="img" aria-labelledby="bay-title bay-desc">
         <title id="bay-title">Diplomat 38 PBD compartment layout</title>
-        <desc id="bay-desc">Top-down view. Driver / road side D1&ndash;D5 along the top, passenger / curb side P1&ndash;P5 along the bottom, front at the left. The pass-through bay is one interior with two doors: D3 on the driver side and P2 on the passenger side.</desc>
+        <desc id="bay-desc">Top-down view. Passenger / curb side P1&ndash;P5 along the top with the entry door at the front; driver / road side D1&ndash;D5 along the bottom. Front at the left. The pass-through bay is one interior with two doors, P2 (top) and D3 (bottom), aligned fore-aft.</desc>
         <defs>
           <linearGradient id="bay-body" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#2f3a3f"/>
@@ -46,10 +46,14 @@
             <stop offset="0" stop-color="rgba(255,176,32,0.20)"/>
             <stop offset="1" stop-color="rgba(255,176,32,0.06)"/>
           </linearGradient>
+          <linearGradient id="bay-door" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="rgba(74,182,255,0.10)"/>
+            <stop offset="1" stop-color="rgba(74,182,255,0.02)"/>
+          </linearGradient>
         </defs>
 
-        <text x="40" y="30" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#8a969b">DRIVER / ROAD SIDE</text>
-        <text x="40" y="308" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#8a969b">PASSENGER / CURB SIDE</text>
+        <text x="40" y="30" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#8a969b">PASSENGER / CURB SIDE</text>
+        <text x="40" y="308" font-family="'IBM Plex Mono', monospace" font-size="11" letter-spacing="2.4" fill="#8a969b">DRIVER / ROAD SIDE</text>
 
         <path d="M 40 60 L 60 45 L 700 45 Q 780 45 800 90 L 800 240 Q 780 285 700 285 L 60 285 L 40 270 Z"
               fill="url(#bay-body)" stroke="#3a464b" stroke-width="1.5"/>
@@ -58,21 +62,27 @@
         <text x="785" y="165" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="2" fill="#5a6367" transform="rotate(-90 785 165)" text-anchor="middle">REAR</text>
 
         <g font-family="'IBM Plex Mono', monospace">
-          <rect x="90" y="70" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="154" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D1</text>
+          <rect x="90" y="70" width="128" height="70" rx="6" fill="url(#bay-door)" stroke="#4ab6ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M 100 138 Q 130 100 200 100" fill="none" stroke="#4ab6ff" stroke-width="1" stroke-dasharray="2 2"/>
+          <circle cx="100" cy="138" r="2.5" fill="#4ab6ff"/>
+          <text x="154" y="112" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1.6" fill="#4ab6ff">ENTRY</text>
+          <text x="154" y="128" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1.6" fill="#4ab6ff">DOOR</text>
 
           <rect x="226" y="70" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="290" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D2</text>
+          <text x="290" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P1</text>
 
           <rect x="362" y="70" width="128" height="70" rx="6" fill="url(#bay-passthru)" stroke="#ffb020" stroke-width="1.5"/>
-          <text x="426" y="105" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#ffe1a3">D3</text>
+          <text x="426" y="105" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#ffe1a3">P2</text>
           <text x="426" y="128" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="2" fill="#ffb020">PASS-THROUGH</text>
 
-          <rect x="498" y="70" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="562" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D4</text>
+          <rect x="498" y="70" width="88" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="542" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P3</text>
 
-          <rect x="634" y="70" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="698" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D5</text>
+          <rect x="594" y="70" width="88" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="638" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P4</text>
+
+          <rect x="690" y="70" width="72" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="726" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P5</text>
         </g>
 
         <line x1="90" y1="160" x2="762" y2="160" stroke="#1a2124" stroke-dasharray="2 4"/>
@@ -80,25 +90,25 @@
 
         <g font-family="'IBM Plex Mono', monospace">
           <rect x="90" y="180" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="154" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P1</text>
+          <text x="154" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D1</text>
 
-          <rect x="226" y="180" width="264" height="70" rx="6" fill="url(#bay-passthru)" stroke="#ffb020" stroke-width="1.5"/>
-          <text x="358" y="215" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#ffe1a3">P2</text>
-          <text x="358" y="238" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="2" fill="#ffb020">PASS-THROUGH</text>
+          <rect x="226" y="180" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="290" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D2</text>
 
-          <rect x="498" y="180" width="88" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="542" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P3</text>
+          <rect x="362" y="180" width="128" height="70" rx="6" fill="url(#bay-passthru)" stroke="#ffb020" stroke-width="1.5"/>
+          <text x="426" y="215" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#ffe1a3">D3</text>
+          <text x="426" y="238" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="2" fill="#ffb020">PASS-THROUGH</text>
 
-          <rect x="594" y="180" width="88" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="638" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P4</text>
+          <rect x="498" y="180" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="562" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D4</text>
 
-          <rect x="690" y="180" width="72" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
-          <text x="726" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">P5</text>
+          <rect x="634" y="180" width="128" height="70" rx="6" fill="url(#bay-inside)" stroke="#2f3a3f"/>
+          <text x="698" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#d8dee1">D5</text>
         </g>
 
-        <path d="M 426 140 Q 426 160 358 160 Q 358 180 358 180" fill="none" stroke="#ffb020" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="426" y1="140" x2="426" y2="180" stroke="#ffb020" stroke-width="1.5" stroke-dasharray="4 3"/>
       </svg>
-      <figcaption class="panel-diagram-cap">Top-down schematic &mdash; approximate door positions; D3 and P2 open into one shared interior</figcaption>
+      <figcaption class="panel-diagram-cap">Top-down &mdash; passenger side up, entry door at the front. P2 and D3 open into one shared interior.</figcaption>
     </figure>
 
     <div class="banner banner-info">
@@ -106,12 +116,86 @@
       <div class="banner-body">
         <div class="banner-title">Convention</div>
         <p>
-          <strong>Driver / road side:</strong> D1, D2, D3, D4, D5 &mdash; front to back.<br>
           <strong>Passenger / curb side:</strong> P1, P2, P3, P4, P5 &mdash; front to back.<br>
-          <strong>Pass-through:</strong> one bay, two doors &mdash; <strong>D3 / P2</strong>.<br>
+          <strong>Driver / road side:</strong> D1, D2, D3, D4, D5 &mdash; front to back.<br>
+          <strong>Pass-through:</strong> one bay, two doors &mdash; <strong>P2 / D3</strong>.<br>
+          <strong>Entry door:</strong> at the very front of the passenger / curb side. That's why P2 (pass-through) aligns fore-aft with <strong>D3</strong>, not D2 &mdash; the door displaces the numbering forward on the passenger side.<br>
           <strong>Photo naming:</strong> <span style="font-family:var(--mono);">D2.jpg</span> for a single shot,
           <span style="font-family:var(--mono);">D2_a.jpg</span> / <span style="font-family:var(--mono);">D2_b.jpg</span> for multiple angles.
         </p>
+      </div>
+    </div>
+
+    <div class="subhead">Passenger / Curb Side</div>
+    <div class="bay-grid">
+      <div class="bay" id="P1" data-bay="P1">
+        <div class="bay-header"><span class="bay-label">P1</span></div>
+        <div class="bay-contents">
+          <span class="primary">Provisions &amp; chairs</span>
+          <ul>
+            <li>Bottled drinking water (cases)</li>
+            <li>Paper towels + TP &mdash; top shelf</li>
+            <li>Folding chairs &mdash; bottom</li>
+          </ul>
+          <span class="sub">Entry door is directly in front of this bay</span>
+        </div>
+        <div class="bay-photo">Photo pending &mdash; send P1.jpg</div>
+      </div>
+      <div class="bay pass-through" id="P2" data-bay="P2">
+        <div class="bay-header"><span class="bay-label">P2</span><span class="bay-tag">Pass-through &middot; shared w/ D3</span></div>
+        <div class="bay-contents">
+          <span class="primary">Outdoor kitchen + spare</span>
+          <ul>
+            <li>Rugs</li>
+            <li>BBQ grill</li>
+            <li>Blackstone griddle</li>
+            <li>Blackstone table / kitchen setup</li>
+            <li>Green Mountain mini smoker</li>
+            <li>Smoker pellets</li>
+            <li>Spare tire</li>
+          </ul>
+        </div>
+        <div class="bay-photo">Photo pending &mdash; send P2.jpg</div>
+      </div>
+      <div class="bay" id="P3" data-bay="P3">
+        <div class="bay-header"><span class="bay-label">P3</span></div>
+        <div class="bay-contents">
+          <span class="primary">Coach propane</span>
+          <ul>
+            <li>ASME horizontal tank</li>
+            <li>Fill port</li>
+          </ul>
+        </div>
+        <div class="bay-photo">Photo pending &mdash; send P3.jpg</div>
+      </div>
+      <div class="bay" id="P4" data-bay="P4">
+        <div class="bay-header"><span class="bay-label">P4</span></div>
+        <div class="bay-contents">
+          <span class="primary">Batteries</span>
+          <ul>
+            <li>Chassis batteries</li>
+            <li>House bank: 4 &times; Group 24 AGM (Super Start 24MAGM)</li>
+          </ul>
+        </div>
+        <div class="bay-photo">Photo pending &mdash; send P4.jpg</div>
+      </div>
+      <div class="bay" id="P5" data-bay="P5">
+        <div class="bay-header"><span class="bay-label">P5</span></div>
+        <div class="bay-contents">
+          <span class="primary">Inverter + engine consumables</span>
+          <ul>
+            <li>Trace inverter (with 15 A charger breaker on face)</li>
+          </ul>
+          <span class="sub">Engine consumables</span>
+          <ul>
+            <li>Filters</li>
+            <li>Oil</li>
+            <li>Antifreeze</li>
+            <li>Transmission fluid</li>
+            <li>Filter wrenches</li>
+          </ul>
+        </div>
+        <div class="bay-photo">Photo pending &mdash; send P5.jpg</div>
       </div>
     </div>
 
@@ -176,78 +260,6 @@
           </ul>
         </div>
         <div class="bay-photo">Photo pending &mdash; send D5.jpg</div>
-      </div>
-    </div>
-
-    <div class="subhead">Passenger / Curb Side</div>
-    <div class="bay-grid">
-      <div class="bay" id="P1" data-bay="P1">
-        <div class="bay-header"><span class="bay-label">P1</span></div>
-        <div class="bay-contents">
-          <span class="primary">Provisions &amp; chairs</span>
-          <ul>
-            <li>Bottled drinking water (cases)</li>
-            <li>Paper towels + TP &mdash; top shelf</li>
-            <li>Folding chairs &mdash; bottom</li>
-          </ul>
-        </div>
-        <div class="bay-photo">Photo pending &mdash; send P1.jpg</div>
-      </div>
-      <div class="bay pass-through" id="P2" data-bay="P2">
-        <div class="bay-header"><span class="bay-label">P2</span><span class="bay-tag">Pass-through &middot; shared w/ D3</span></div>
-        <div class="bay-contents">
-          <span class="primary">Outdoor kitchen + spare</span>
-          <ul>
-            <li>Rugs</li>
-            <li>BBQ grill</li>
-            <li>Blackstone griddle</li>
-            <li>Blackstone table / kitchen setup</li>
-            <li>Green Mountain mini smoker</li>
-            <li>Smoker pellets</li>
-            <li>Spare tire</li>
-          </ul>
-        </div>
-        <div class="bay-photo">Photo pending &mdash; send P2.jpg</div>
-      </div>
-      <div class="bay" id="P3" data-bay="P3">
-        <div class="bay-header"><span class="bay-label">P3</span></div>
-        <div class="bay-contents">
-          <span class="primary">Coach propane</span>
-          <ul>
-            <li>ASME horizontal tank</li>
-            <li>Fill port</li>
-          </ul>
-        </div>
-        <div class="bay-photo">Photo pending &mdash; send P3.jpg</div>
-      </div>
-      <div class="bay" id="P4" data-bay="P4">
-        <div class="bay-header"><span class="bay-label">P4</span></div>
-        <div class="bay-contents">
-          <span class="primary">Batteries</span>
-          <ul>
-            <li>Chassis batteries</li>
-            <li>House bank: 4 &times; Group 24 AGM (Super Start 24MAGM)</li>
-          </ul>
-        </div>
-        <div class="bay-photo">Photo pending &mdash; send P4.jpg</div>
-      </div>
-      <div class="bay" id="P5" data-bay="P5">
-        <div class="bay-header"><span class="bay-label">P5</span></div>
-        <div class="bay-contents">
-          <span class="primary">Inverter + engine consumables</span>
-          <ul>
-            <li>Trace inverter (with 15 A charger breaker on face)</li>
-          </ul>
-          <span class="sub">Engine consumables</span>
-          <ul>
-            <li>Filters</li>
-            <li>Oil</li>
-            <li>Antifreeze</li>
-            <li>Transmission fluid</li>
-            <li>Filter wrenches</li>
-          </ul>
-        </div>
-        <div class="bay-photo">Photo pending &mdash; send P5.jpg</div>
       </div>
     </div>
 
