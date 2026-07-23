@@ -76,6 +76,11 @@
       tags: ["generator", "onan", "flash codes", "indicator", "preheat", "high temp", "low oil pressure"],
     },
     {
+      q: "What bulb does the coach interior use, and what's the LED replacement?",
+      a: "Original bulbs are 1141 incandescent — 12V DC, BA15s single-contact bayonet base, 18W, ~264 lumens warm white. Same bulb also fits sockets marked 1156, 1003, or 7506. LED drop-in replacements use the same BA15s base and 12V DC — no wiring, just twist and swap. Local buy in Sterling, CO: both Walmart Supercenter (1510 W Main St, store #924) and Home Depot (1614 W Main St, store #1545) are right next door to each other. Walmart.com carries several 10-pack LED 1141 warm-white options with in-store pickup at the Sterling location — HQRP 10-pack, 2800-3200K warm white, is closest color match to the original tungsten. Home Depot lists an LED 1141 (DG79023WVP) as well. Want brighter? A 3000K 2W pack pushes 500 lm each — a real upgrade over the dim incandescent. Stock a 10-pack: overhead, reading, ceiling puck, and bay lights all use the same bulb.",
+      tags: ["lighting", "bulb", "1141", "1156", "BA15s", "LED", "interior", "warm white", "12V", "replacement", "walmart", "home depot", "sterling"],
+    },
+    {
       q: "How is the coach awning powered and where's the switch?",
       a: "Two controls. A key switch enables power to the awning motor — the key lives on the RV key ring, stored in the cupboard above the driver's seat. A separate rocker inside the entry stairwell drives the awning in or out. Key must be ON before the rocker does anything. Full procedure and safety rules: Guide > Awning.",
       tags: ["awning", "key", "stairwell", "controls"],

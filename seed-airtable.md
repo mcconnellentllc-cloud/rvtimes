@@ -263,6 +263,16 @@ Part #:
 Notes:     Genset takes 3 qt w/filter. Stock 1 gal for one change + top-off.
 ```
 
+Row 11
+```
+Part:      1141 LED bulb (BA15s, 12V, warm white)
+Category:  Lighting
+Qty:       0
+Location:  Interior
+Part #:    1141 / 1156 / BA15s
+Notes:     Drop-in LED replacement for coach interior 1141 incandescents. Warm white (2700-3200K) for best color match to original. Buy a 10-pack at Walmart Sterling (#924, 1510 W Main) or Home Depot Sterling (#1545, 1614 W Main) — order online for in-store pickup. Same bulb fits sockets marked 1141/1156/1003/7506 — overhead, reading, ceiling puck, bay lights all use it.
+```
+
 ---
 
 ## Sanity check when it's live
