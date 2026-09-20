@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <title>Diplomat &mdash; Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/logbook.css">
+</head>
+<body>
+  <div class="gate">
+    <h1>Diplomat</h1>
+    <div class="hint">Enter password</div>
+    <input id="pw" type="password" autocomplete="current-password" autofocus>
+    <button id="unlock" class="go">Unlock</button>
+    <div id="err" class="err"></div>
+  </div>
+
+  <script>
+    (function () {
+      const KEY = 'diplomat.site.v1';
+      const HASH = 'c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4';
+
+      function safeReturnPath() {
+        const params = new URLSearchParams(window.location.search);
+        const raw = params.get('return') || 'index.html';
+        try {
+          const decoded = decodeURIComponent(raw);
+          if (/^https?:/i.test(decoded)) return 'index.html';
+          if (decoded.startsWith('//')) return 'index.html';
+          return decoded;
+        } catch {
+          return 'index.html';
+        }
+      }
+
+      async function sha256Hex(str) {
+        const data = new TextEncoder().encode(str);
+        const buf = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(buf))
+          .map((b) => b.toString(16).padStart(2, '0'))
+          .join('');
+      }
+
+      async function tryUnlock() {
+        const pw = document.getElementById('pw').value;
+        const err = document.getElementById('err');
+        err.textContent = '';
+        if (!pw) { err.textContent = 'Enter the password'; return; }
+        const hash = await sha256Hex(pw);
+        if (hash !== HASH) {
+          err.textContent = 'Wrong password';
+          document.getElementById('pw').select();
+          return;
+        }
+        try { localStorage.setItem(KEY, HASH); } catch {}
+        const target = safeReturnPath();
+        window.location.replace(target);
+      }
+
+      // Already authed? Skip the form and go straight in.
+      try {
+        if (localStorage.getItem(KEY) === HASH) {
+          window.location.replace(safeReturnPath());
+          return;
+        }
+      } catch {}
+
+      document.getElementById('unlock').addEventListener('click', tryUnlock);
+      document.getElementById('pw').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') tryUnlock();
+      });
+    })();
+  </script>
+</body>
+</html>
