@@ -275,22 +275,22 @@ Notes:     Drop-in LED replacement for coach interior 1141 incandescents. Warm w
 
 Row 12
 ```
-Part:      Starlink spare coax (SPX / RJ45 — match dish model)
+Part:      Starlink Mini — spare USB-C PD cable
 Category:  Starlink
 Qty:       0
 Location:  (TBD)
 Part #:
-Notes:     Spare coax run for the deployed dish. Keep sealed end-caps when stowed. Replace if kinked or if signal drops without an obstruction — damaged coax is the #1 field-repair item. Match length to how far the dish needs to reach from the coach.
+Notes:     Spare power cable for the Mini (USB-C to proprietary Starlink end). Replace if frayed or if power drops without obstruction. Kit ships with one cable; a spare is cheap insurance.
 ```
 
 Row 13
 ```
-Part:      Starlink mount / stand hardware
+Part:      Starlink Mini — 12 V USB-C PD trigger adapter
 Category:  Starlink
 Qty:       0
 Location:  (TBD)
 Part #:
-Notes:     Tripod feet, stakes, or whatever the chosen stand needs. Set aside with the dish so one grab covers deployment.
+Notes:     Runs the Mini off the 12 V house bank without the inverter. ~30 W direct DC vs idling the inverter for a 30 W load. Pick a 100 W PD-rated adapter from a known brand. Nice-to-have for extended boondocking.
 ```
 
 ---

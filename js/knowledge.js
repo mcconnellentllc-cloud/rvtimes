@@ -82,13 +82,28 @@
     },
     {
       q: "Starlink won't connect at camp — what do I check first?",
-      a: "Five things in order. (1) Sky view — must be 100°+ clear with no trees, awning, canopy, or coach above; use the Starlink app's Obstruction Check to pick the spot. (2) Power — ~65 W AC on Gen 3 Standard, ~30-50 W on Mini; verify shore or genset is actually live. (3) Thermal — if the dish was in direct Colorado sun on hot pavement, it may have shut itself down above ~120°F internal; feel the back of the dish, move it to partial shade and wait for it to cool. (4) Firmware — first use at a new location can trigger a slow update; give it up to 15 minutes before troubleshooting. (5) Plan — residential plans require 'stopped and deployed' not in-motion; running in-motion needs a Roam plan.",
-      tags: ["starlink", "internet", "wifi", "dish", "obstruction", "thermal", "connect", "no signal"],
+      a: "On the Mini, five things in order. (1) Sky view — must be 110°+ clear with no trees, awning, canopy, or coach above; use the Starlink app's Obstruction Check to pick the spot. (2) Power — ~20-40 W typical / ~100 W peak via USB-C PD; verify the brick is actually powered and the cable is seated at both ends. (3) Thermal — if the Mini was in direct Colorado sun on hot pavement, it may have shut itself down above ~120°F internal; feel the back, move it to partial shade, let it cool. (4) Firmware — first use at a new location can trigger a slow update; give it up to 15 minutes before troubleshooting. (5) Plan — residential plans require 'stopped and deployed' not in-motion; running in-motion needs a Roam plan.",
+      tags: ["starlink", "mini", "internet", "wifi", "dish", "obstruction", "thermal", "connect", "no signal"],
     },
     {
       q: "Can I run Starlink while driving the coach?",
-      a: "Only on a Roam plan (Residential Roam, Roam Regional, Roam Unlimited, or Mini Roam) with a mobile / flat-mount dish. Residential plans with portability are STOP-TO-USE — you must park, deploy the dish on a stand, and point it at clear sky. Running a residential dish in-motion gives you signal only when stationary and may flag the account. Check the plan in the Starlink app before assuming.",
-      tags: ["starlink", "roam", "in-motion", "driving", "plan", "mobile"],
+      a: "Only on a Roam plan — Mini Roam supports in-motion use with the Mini dish. Residential plans with portability are STOP-TO-USE: you must park, deploy the dish on its kickstand, and point it at clear sky. Trying to use a residential plan in-motion gives you signal only when stationary and may flag the account. Check the plan in the Starlink app before assuming.",
+      tags: ["starlink", "roam", "mini", "in-motion", "driving", "plan", "mobile"],
+    },
+    {
+      q: "The Starlink WiFi SSID is 'STARLINK' with no password — is that safe?",
+      a: "No. Factory default on the Mini is an unsecured open WiFi named 'STARLINK'. Anyone in WiFi range can jump on, use your data, and worse — be on the same local network as every device in the coach. Fix it before you use it: Starlink app → Settings → WiFi, set a custom SSID and a WPA2 password. Takes 60 seconds. Don't skip this because 'we're on our own property' — the Mini's WiFi reaches further than you think.",
+      tags: ["starlink", "mini", "wifi", "security", "ssid", "password", "open network", "lock"],
+    },
+    {
+      q: "How do I change the Starlink WiFi name and password?",
+      a: "On the phone: (1) Download the Starlink app (App Store or Google Play) if not already installed. (2) Connect the phone to the open STARLINK WiFi for now. (3) Open the app — it auto-detects the dish on the same network; you'll land on its home screen within a few seconds. (4) Tap SETTINGS at the bottom, then WIFI. (5) Under NETWORK NAME, type whatever you want to call it (e.g. Diplomat-Net). (6) Under SECURITY, pick WPA2 (or WPA2/WPA3 if offered). (7) Under PASSWORD, enter at least 8 characters — make it memorable but not guessable. (8) Tap SAVE. The dish resets its WiFi (~30 sec) and every device has to reconnect using the new name + password. First device to reconnect: the phone, with the new credentials. No app? Same thing works at http://192.168.1.1 in a browser on a device that's already joined the WiFi.",
+      tags: ["starlink", "mini", "wifi", "password", "ssid", "change", "setup", "app", "security"],
+    },
+    {
+      q: "What's the power draw of the Starlink Mini and how do I run it on 12V DC?",
+      a: "Mini uses USB-C PD input, 12-48 V input range, typical 20-40 W / peak ~100 W. Three ways to power on the coach: (1) included 100 W USB-C PD brick plugged into shore, generator, or inverter outlet — simplest, ~30 W draw end-to-end; (2) any quality 100 W-rated USB-C PD adapter; (3) a 12 V USB-C PD trigger adapter for direct DC from the house bank — skips the inverter so you don't idle it for a 30 W load. Options (1) and (2) are easy; option (3) is nicer for long boondocking because you lose the inverter conversion loss.",
+      tags: ["starlink", "mini", "power", "watts", "USB-C", "PD", "12V", "DC", "inverter"],
     },
     {
       q: "How is the coach awning powered and where's the switch?",

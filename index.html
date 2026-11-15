@@ -1003,16 +1003,24 @@
         <h2>Starlink</h2>
         <span class="meta" data-progress></span>
       </div>
-      <div class="section-sub">(Model TBD) &middot; deploy at the site &middot; stow before driving</div>
+      <div class="section-sub">Starlink Mini &middot; integrated kickstand &middot; USB-C PD power &middot; ~20&ndash;40 W</div>
+
+      <div class="banner banner-danger">
+        <span class="led red"></span>
+        <div class="banner-body">
+          <div class="banner-title">Lock the WiFi first &mdash; default SSID is OPEN</div>
+          <p>Factory default on the Mini is an unsecured network named <strong>STARLINK</strong>. Anyone in WiFi range &mdash; campground neighbors, people at the pump, random passers-by &mdash; can jump on, see your traffic, and be on your local network with every device in the coach. Open the Starlink app &rarr; Settings &rarr; WiFi, set an SSID name (whatever you want) and a <strong>WPA2 password</strong>. Do this before you leave the yard.</p>
+        </div>
+      </div>
 
       <div class="banner banner-info">
         <span class="led blue"></span>
         <div class="banner-body">
-          <div class="banner-title">Model &middot; plan &middot; storage &mdash; TBD</div>
-          <p>Send me three things and I'll fill them in here:
-            <strong>1)</strong> which dish (Gen 3 Standard &middot; Mini &middot; Flat High-Performance),
-            <strong>2)</strong> which plan (Residential + Roam add-on &middot; Roam Regional $50 &middot; Roam Unlimited $165 &middot; Mini Roam),
-            <strong>3)</strong> where the dish lives when stowed (which bay or roof mount).
+          <div class="banner-title">What we know, what's still TBD</div>
+          <p>
+            Dish: <strong>Starlink Mini</strong> (integrated kickstand, no separate tripod needed).<br>
+            Power: USB-C PD input, 12&ndash;48 V, typical <strong>20&ndash;40 W</strong> / peak ~100 W. Use the included 100 W PD brick on shore, a 100 W-rated USB-C PD adapter on inverter, or a 12 V USB-C PD trigger adapter for direct DC.<br>
+            Still TBD: service <strong>plan</strong> (Mini Roam is the usual pick for coach use) and <strong>storage bay</strong> (which bay does the kit live in when stowed?). Tell me and I'll fill both in.
           </p>
         </div>
       </div>
@@ -1020,16 +1028,8 @@
       <div class="banner banner-warning">
         <span class="led amber"></span>
         <div class="banner-body">
-          <div class="banner-title">Needs clear sky &mdash; nothing above it</div>
-          <p>Starlink wants 100&deg;+ of open sky. Trees, the coach roof, the pop-up canopy, and the main awning all block signal. Place the dish AWAY from the coach, not under shade. The Starlink app has an Obstruction Check &mdash; use it before committing to a spot.</p>
-        </div>
-      </div>
-
-      <div class="banner banner-danger">
-        <span class="led red"></span>
-        <div class="banner-body">
-          <div class="banner-title">In-motion use depends on the plan</div>
-          <p>Only the <strong>Roam</strong> plans (including Mini Roam) allow in-motion use with a flat/mobile dish mount. Residential plans with portability require you to <strong>stop and deploy</strong>. Trying to run a residential dish in-motion gets you a signal-only-when-parked experience and may flag the account. Confirm your plan before assuming anything.</p>
+          <div class="banner-title">Needs 110&deg;+ of clear sky above it</div>
+          <p>Mini's field of view is wider than the older dishes &mdash; <strong>110&deg; clear sky</strong> required. Trees, the coach roof, the main awning, and the pop-up canopy all block signal. Place it AWAY from the coach, not under shade. The Starlink app has an Obstruction Check &mdash; use it before committing to a spot.</p>
         </div>
       </div>
 
@@ -1039,7 +1039,7 @@
           <span class="led amber"></span>
           <span class="step-index">01</span>
           <span class="step-body">
-            Site setup finished first (shore / water / sewer).
+            Finish site setup first (shore / water / sewer).
             <span class="note">Starlink is the last thing to go out so it's not in the way.</span>
           </span>
         </li>
@@ -1047,52 +1047,53 @@
           <span class="led amber"></span>
           <span class="step-index">02</span>
           <span class="step-body">
-            Pull the dish from its storage bay (TBD) with the coax and PoE / router.
+            Pull the Mini and the power brick / cable from its storage bay (TBD).
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">03</span>
           <span class="step-body">
-            Pick a spot with 100&deg;+ clear sky &mdash; 10&nbsp;ft+ from trees, coach, and awnings.
-            <span class="note">Use the Starlink app's Obstruction Check to confirm the spot before you unspool cable.</span>
+            Pick a spot with 110&deg;+ clear sky &mdash; 10&nbsp;ft+ from trees, coach, and awnings.
+            <span class="note">Use the Starlink app's Obstruction Check to confirm before you unspool cable.</span>
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">04</span>
           <span class="step-body">
-            Level the dish stand. Point roughly true north (northern-hemisphere default) &mdash; the dish auto-aligns, but help it start.
+            Flip the integrated kickstand down and set the dish on level ground, tilted roughly skyward. The Mini will finish the aim electronically.
+            <span class="note">No separate tripod needed &mdash; the kickstand is the mount.</span>
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">05</span>
           <span class="step-body">
-            Route the coax back to the coach. Protect it where it crosses foot traffic.
-            <span class="note">Tight bends damage coax permanently &mdash; keep bends soft, 6" radius minimum.</span>
+            Run the USB-C PD cable back to the coach. Protect it where it crosses foot traffic; keep bends soft.
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">06</span>
           <span class="step-body">
-            Plug the router / PoE into shore power or an inverter outlet.
-            <span class="note">~65 W AC for Gen 3 Standard; ~30&ndash;50 W for Mini. Negligible load on 50 A shore or the genset.</span>
+            Plug into the 100 W PD brick on shore / genset, OR a 100 W inverter outlet, OR a 12 V PD trigger adapter for direct DC.
+            <span class="note">Mini draws ~20&ndash;40 W typical, ~100 W peak &mdash; trivial on any of these.</span>
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">07</span>
           <span class="step-body">
-            Wait 1&ndash;5 min for alignment. First time at a new location, allow up to 15 min for any firmware pull.
+            Wait 1&ndash;5 min for alignment. First run at a new site may pull firmware &mdash; allow up to 15 min.
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">08</span>
           <span class="step-body">
-            Connect devices to the Starlink Wi-Fi SSID (printed on the router / in the app).
+            Connect devices to the Starlink SSID &mdash; your custom name if you set one, or <strong>STARLINK</strong> plus the WPA2 password you set.
+            <span class="note">If the TV / phones still see an open STARLINK network: you haven't locked it yet. Open the app and do it now.</span>
           </span>
         </li>
       </ol>
@@ -1103,14 +1104,14 @@
           <span class="led amber"></span>
           <span class="step-index">01</span>
           <span class="step-body">
-            Unplug the router / PoE. If the dish was in sun, let it cool 5&ndash;10 min before handling.
+            Unplug power at the brick. Let the dish cool 5&ndash;10 min if it was in full sun.
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">02</span>
           <span class="step-body">
-            Disconnect coax from the router / PoE side. Keep the dish side plugged in to protect the connector during coil.
+            Disconnect the USB-C cable from the dish.
           </span>
         </li>
         <li class="step" data-checked="false">
@@ -1124,14 +1125,14 @@
           <span class="led amber"></span>
           <span class="step-index">04</span>
           <span class="step-body">
-            Coil the coax in loose loops &mdash; same direction every time to avoid memory kinks.
+            Fold the kickstand flat against the back. Coil the USB-C cable in loose loops.
           </span>
         </li>
         <li class="step" data-checked="false">
           <span class="led amber"></span>
           <span class="step-index">05</span>
           <span class="step-body">
-            Return the dish, cable, and router / PoE to the storage bay (TBD). Confirm nothing is left on the ground.
+            Return the dish, cable, and brick to the storage bay (TBD). Confirm nothing is left on the ground.
           </span>
         </li>
       </ol>
@@ -1140,7 +1141,7 @@
         <span class="led green"></span>
         <div class="banner-body">
           <div class="banner-title">Thermal shutdown is a real thing</div>
-          <p>In full Colorado summer sun, dark pavement, no breeze &mdash; the dish can overheat (internal above ~120&deg;F / 50&deg;C) and self-shutdown. If service drops mid-day, feel the back of the dish. If it's hot: move it to partial shade, put a light cloth / towel underneath to reflect the pavement heat, or tilt it to break full-sun contact. It'll come back on its own as it cools.</p>
+          <p>Mini is smaller and heats up faster than the Standard. In full Colorado summer sun on dark pavement, it can hit the ~120&deg;F / 50&deg;C internal limit and self-shutdown. If service drops mid-day, feel the back. If hot: move to partial shade, put a light cloth / towel underneath to break pavement radiation, or tilt it to interrupt direct sun. It'll come back on its own as it cools.</p>
         </div>
       </div>
     </section>
