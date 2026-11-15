@@ -37,6 +37,7 @@
       <button class="tab" role="tab" aria-selected="false" data-section="leveling">Leveling</button>
       <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
       <button class="tab" role="tab" aria-selected="false" data-section="generator">Generator</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="starlink">Starlink</button>
       <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
       <button class="tab" role="tab" aria-selected="false" data-section="plumbing">Plumbing</button>
     </nav>
@@ -990,6 +991,156 @@
         <div class="banner-body">
           <div class="banner-title">Prevention beats the cure</div>
           <p>Run the genset <strong>monthly</strong> at <strong>50%+ load</strong> for at least an hour. Wet stacking is caused by chronic under-loading; regular loaded exercise keeps combustion clean and the exhaust dry.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STARLINK
+         ============================================================ -->
+    <section class="section" id="section-starlink" data-section="starlink" role="tabpanel">
+      <div class="section-head">
+        <h2>Starlink</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">(Model TBD) &middot; deploy at the site &middot; stow before driving</div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">Model &middot; plan &middot; storage &mdash; TBD</div>
+          <p>Send me three things and I'll fill them in here:
+            <strong>1)</strong> which dish (Gen 3 Standard &middot; Mini &middot; Flat High-Performance),
+            <strong>2)</strong> which plan (Residential + Roam add-on &middot; Roam Regional $50 &middot; Roam Unlimited $165 &middot; Mini Roam),
+            <strong>3)</strong> where the dish lives when stowed (which bay or roof mount).
+          </p>
+        </div>
+      </div>
+
+      <div class="banner banner-warning">
+        <span class="led amber"></span>
+        <div class="banner-body">
+          <div class="banner-title">Needs clear sky &mdash; nothing above it</div>
+          <p>Starlink wants 100&deg;+ of open sky. Trees, the coach roof, the pop-up canopy, and the main awning all block signal. Place the dish AWAY from the coach, not under shade. The Starlink app has an Obstruction Check &mdash; use it before committing to a spot.</p>
+        </div>
+      </div>
+
+      <div class="banner banner-danger">
+        <span class="led red"></span>
+        <div class="banner-body">
+          <div class="banner-title">In-motion use depends on the plan</div>
+          <p>Only the <strong>Roam</strong> plans (including Mini Roam) allow in-motion use with a flat/mobile dish mount. Residential plans with portability require you to <strong>stop and deploy</strong>. Trying to run a residential dish in-motion gets you a signal-only-when-parked experience and may flag the account. Confirm your plan before assuming anything.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Deploy at the Site</div>
+      <ol class="steps" data-steps="starlink-deploy">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Site setup finished first (shore / water / sewer).
+            <span class="note">Starlink is the last thing to go out so it's not in the way.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Pull the dish from its storage bay (TBD) with the coax and PoE / router.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Pick a spot with 100&deg;+ clear sky &mdash; 10&nbsp;ft+ from trees, coach, and awnings.
+            <span class="note">Use the Starlink app's Obstruction Check to confirm the spot before you unspool cable.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Level the dish stand. Point roughly true north (northern-hemisphere default) &mdash; the dish auto-aligns, but help it start.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Route the coax back to the coach. Protect it where it crosses foot traffic.
+            <span class="note">Tight bends damage coax permanently &mdash; keep bends soft, 6" radius minimum.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Plug the router / PoE into shore power or an inverter outlet.
+            <span class="note">~65 W AC for Gen 3 Standard; ~30&ndash;50 W for Mini. Negligible load on 50 A shore or the genset.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Wait 1&ndash;5 min for alignment. First time at a new location, allow up to 15 min for any firmware pull.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">08</span>
+          <span class="step-body">
+            Connect devices to the Starlink Wi-Fi SSID (printed on the router / in the app).
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Stow Before Driving</div>
+      <ol class="steps" data-steps="starlink-stow">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Unplug the router / PoE. If the dish was in sun, let it cool 5&ndash;10 min before handling.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Disconnect coax from the router / PoE side. Keep the dish side plugged in to protect the connector during coil.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Wipe the dish face with a soft dry cloth. Grit + rain = micro-abrasion on the array.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Coil the coax in loose loops &mdash; same direction every time to avoid memory kinks.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Return the dish, cable, and router / PoE to the storage bay (TBD). Confirm nothing is left on the ground.
+          </span>
+        </li>
+      </ol>
+
+      <div class="banner banner-verify" style="margin-top:18px;">
+        <span class="led green"></span>
+        <div class="banner-body">
+          <div class="banner-title">Thermal shutdown is a real thing</div>
+          <p>In full Colorado summer sun, dark pavement, no breeze &mdash; the dish can overheat (internal above ~120&deg;F / 50&deg;C) and self-shutdown. If service drops mid-day, feel the back of the dish. If it's hot: move it to partial shade, put a light cloth / towel underneath to reflect the pavement heat, or tilt it to break full-sun contact. It'll come back on its own as it cools.</p>
         </div>
       </div>
     </section>

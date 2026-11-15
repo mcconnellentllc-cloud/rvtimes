@@ -81,6 +81,16 @@
       tags: ["lighting", "bulb", "1141", "1156", "BA15s", "LED", "interior", "warm white", "12V", "replacement", "walmart", "home depot", "sterling"],
     },
     {
+      q: "Starlink won't connect at camp — what do I check first?",
+      a: "Five things in order. (1) Sky view — must be 100°+ clear with no trees, awning, canopy, or coach above; use the Starlink app's Obstruction Check to pick the spot. (2) Power — ~65 W AC on Gen 3 Standard, ~30-50 W on Mini; verify shore or genset is actually live. (3) Thermal — if the dish was in direct Colorado sun on hot pavement, it may have shut itself down above ~120°F internal; feel the back of the dish, move it to partial shade and wait for it to cool. (4) Firmware — first use at a new location can trigger a slow update; give it up to 15 minutes before troubleshooting. (5) Plan — residential plans require 'stopped and deployed' not in-motion; running in-motion needs a Roam plan.",
+      tags: ["starlink", "internet", "wifi", "dish", "obstruction", "thermal", "connect", "no signal"],
+    },
+    {
+      q: "Can I run Starlink while driving the coach?",
+      a: "Only on a Roam plan (Residential Roam, Roam Regional, Roam Unlimited, or Mini Roam) with a mobile / flat-mount dish. Residential plans with portability are STOP-TO-USE — you must park, deploy the dish on a stand, and point it at clear sky. Running a residential dish in-motion gives you signal only when stationary and may flag the account. Check the plan in the Starlink app before assuming.",
+      tags: ["starlink", "roam", "in-motion", "driving", "plan", "mobile"],
+    },
+    {
       q: "How is the coach awning powered and where's the switch?",
       a: "Two controls. A key switch enables power to the awning motor — the key lives on the RV key ring, stored in the cupboard above the driver's seat. A separate rocker inside the entry stairwell drives the awning in or out. Key must be ON before the rocker does anything. Full procedure and safety rules: Guide > Awning.",
       tags: ["awning", "key", "stairwell", "controls"],

@@ -273,6 +273,26 @@ Part #:    1141 / 1156 / BA15s
 Notes:     Drop-in LED replacement for coach interior 1141 incandescents. Warm white (2700-3200K) for best color match to original. Buy a 10-pack at Walmart Sterling (#924, 1510 W Main) or Home Depot Sterling (#1545, 1614 W Main) — order online for in-store pickup. Same bulb fits sockets marked 1141/1156/1003/7506 — overhead, reading, ceiling puck, bay lights all use it.
 ```
 
+Row 12
+```
+Part:      Starlink spare coax (SPX / RJ45 — match dish model)
+Category:  Starlink
+Qty:       0
+Location:  (TBD)
+Part #:
+Notes:     Spare coax run for the deployed dish. Keep sealed end-caps when stowed. Replace if kinked or if signal drops without an obstruction — damaged coax is the #1 field-repair item. Match length to how far the dish needs to reach from the coach.
+```
+
+Row 13
+```
+Part:      Starlink mount / stand hardware
+Category:  Starlink
+Qty:       0
+Location:  (TBD)
+Part #:
+Notes:     Tripod feet, stakes, or whatever the chosen stand needs. Set aside with the dish so one grab covers deployment.
+```
+
 ---
 
 ## Sanity check when it's live
