@@ -112,8 +112,8 @@
     },
     {
       q: "How do I turn on the water heater?",
-      a: "Different unit from the furnace — this one makes HOT WATER, and it lives UNDER THE CLOSET. (1) Propane ON at the P3 tank. (2) Confirm water in the fresh tank OR city water is hooked up — dry-firing burns out the element. (3) KIB monitor panel → flip the HEATER switch ON. (4) Red indicator lights up and the ignition cycles. (5) Listen for the click and then a steady burn. (6) Walk to the closet, open it, and look down at the heater — confirm the burner is actually lit through the sight port. (7) Give it ~20 minutes to bring 6 gallons up to temp. Full procedure: Guide > Plumbing > Water Heater.",
-      tags: ["water heater", "hot water", "propane", "KIB", "panel", "closet", "ignition", "heater switch"],
+      a: "Different unit from the furnace — this one makes HOT WATER, and it lives UNDER THE CLOSET. (1) Propane ON at the P3 tank. (2) Confirm water in the fresh tank OR city water is hooked up — dry-firing burns out the element. (3) KIB monitor panel → flip the HEATER switch ON. (4) Red indicator lights up and the ignition cycles. (5) Listen for the click and then a steady burn. (6) Walk to the closet, open it, and look down at the heater — confirm the burner is actually lit through the sight port. (7) Give it 20-30 minutes to bring 6 gallons up to temp. Before complaining about no hot water: confirm the HEATER switch is actually ON (red light visible) and that 20-30 min has passed since it was turned on. Full procedure: Guide > Plumbing > Water Heater.",
+      tags: ["water heater", "hot water", "propane", "KIB", "panel", "closet", "ignition", "heater switch", "20 minutes", "30 minutes"],
     },
     {
       q: "What do the gauges and switches on the KIB monitor panel mean?",
