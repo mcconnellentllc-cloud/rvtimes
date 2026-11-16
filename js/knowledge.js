@@ -101,6 +101,16 @@
       tags: ["starlink", "mini", "wifi", "password", "ssid", "change", "setup", "app", "security"],
     },
     {
+      q: "How do I start the furnace?",
+      a: "Quick version: (1) Propane ON at the ASME tank in P3. (2) Ceiling control panel in the front walkway. (3) Scroll mode down to FURNACE. (4) Set the setpoint above room temp. The propane burner lights, the blower comes on, and the furnace cycles until the room hits temp. If it's been sitting unused for a while, pull the access panel under the fridge first and check the burn chamber for mouse nests, wasps, or chewed insulation — screwdrivers are in the bottom drawer at the front of the coach. Full procedure: Guide > Furnace.",
+      tags: ["furnace", "heat", "propane", "thermostat", "ceiling panel", "start", "light"],
+    },
+    {
+      q: "Where is the furnace located and how do I access it?",
+      a: "The furnace lives UNDER the refrigerator. To service or inspect the burn chamber: (1) furnace OFF at the thermostat, (2) propane OFF at the P3 tank, (3) grab a screwdriver from the bottom drawer at the front of the coach, (4) remove the screws on the access panel below the fridge and lift it off. Look for mouse nests, wasp mud, spider webs, and chewed insulation — any of that can ignite when the furnace fires. Vacuum / brush out anything that doesn't belong, reinstall the panel, snug the screws, propane back on.",
+      tags: ["furnace", "access", "service", "burn chamber", "fridge", "screwdriver", "propane"],
+    },
+    {
       q: "What's the power draw of the Starlink Mini and how do I run it on 12V DC?",
       a: "Mini uses USB-C PD input, 12-48 V input range, typical 20-40 W / peak ~100 W. Three ways to power on the coach: (1) included 100 W USB-C PD brick plugged into shore, generator, or inverter outlet — simplest, ~30 W draw end-to-end; (2) any quality 100 W-rated USB-C PD adapter; (3) a 12 V USB-C PD trigger adapter for direct DC from the house bank — skips the inverter so you don't idle it for a 30 W load. Options (1) and (2) are easy; option (3) is nicer for long boondocking because you lose the inverter conversion loss.",
       tags: ["starlink", "mini", "power", "watts", "USB-C", "PD", "12V", "DC", "inverter"],

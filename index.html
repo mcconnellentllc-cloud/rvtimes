@@ -37,6 +37,7 @@
       <button class="tab" role="tab" aria-selected="false" data-section="leveling">Leveling</button>
       <button class="tab" role="tab" aria-selected="false" data-section="electrical">Electrical</button>
       <button class="tab" role="tab" aria-selected="false" data-section="generator">Generator</button>
+      <button class="tab" role="tab" aria-selected="false" data-section="furnace">Furnace</button>
       <button class="tab" role="tab" aria-selected="false" data-section="starlink">Starlink</button>
       <button class="tab" role="tab" aria-selected="false" data-section="flat-tow">Flat-Tow</button>
       <button class="tab" role="tab" aria-selected="false" data-section="plumbing">Plumbing</button>
@@ -991,6 +992,144 @@
         <div class="banner-body">
           <div class="banner-title">Prevention beats the cure</div>
           <p>Run the genset <strong>monthly</strong> at <strong>50%+ load</strong> for at least an hour. Wet stacking is caused by chronic under-loading; regular loaded exercise keeps combustion clean and the exhaust dry.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FURNACE
+         ============================================================ -->
+    <section class="section" id="section-furnace" data-section="furnace" role="tabpanel">
+      <div class="section-head">
+        <h2>Furnace</h2>
+        <span class="meta" data-progress></span>
+      </div>
+      <div class="section-sub">Propane furnace &middot; ceiling thermostat in the front walkway &middot; unit lives under the fridge</div>
+
+      <div class="banner banner-danger">
+        <span class="led red"></span>
+        <div class="banner-body">
+          <div class="banner-title">Check the burn chamber before lighting after storage</div>
+          <p>Mice, wasps, and spiders love a quiet dark space. A nest or chewed insulation in the burn chamber can ignite when the furnace fires. <strong>Before the first run of the season</strong> &mdash; or any time the coach has sat unused for a while &mdash; pull the access panel under the fridge and visually confirm the chamber is clear. Procedure is below under "Service Access."</p>
+        </div>
+      </div>
+
+      <div class="banner banner-warning">
+        <span class="led amber"></span>
+        <div class="banner-body">
+          <div class="banner-title">Exterior vent must be clear too</div>
+          <p>The furnace exhausts through a sidewall vent. If it's blocked by snow, mud daubers, or a bird nest, combustion gases can back up into the coach. Walk around before you fire it and look at the vent on the outside wall.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Start It (quick)</div>
+      <ol class="steps" data-steps="furnace-start">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Propane ON at the ASME tank in <a href="bays.html#P3">P3</a>.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Find the ceiling control panel in the front walkway.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Scroll the mode down to <strong>FURNACE</strong>.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Set the setpoint above room temperature.
+            <span class="note">The propane burner lights, the blower comes on, and the furnace cycles until the setpoint is reached.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Listen for the burner catch and feel for warm air at the floor registers within ~30&ndash;60 seconds.
+            <span class="note">No catch? See Troubleshooting below.</span>
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Service Access (burn-chamber check / clean-out)</div>
+      <ol class="steps" data-steps="furnace-access">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Furnace OFF at the thermostat. Allow it to cool if it was recently running.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Propane OFF at the <a href="bays.html#P3">P3</a> tank valve.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Grab a screwdriver from the bottom drawer at the front of the coach.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            Clear anything in front of the fridge. Remove the access-panel screws beneath the fridge; lift the panel off and set it aside.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Visually inspect the burn chamber and combustion-air path.
+            <span class="note">Look for mouse nests, spider webs, wasp mud, chewed insulation, loose debris. Vacuum / brush out anything that doesn't belong.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Replace the access panel. Snug the screws (don't over-torque). Propane back ON at the tank.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Return the screwdriver to the bottom drawer at the front of the coach.
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Troubleshooting</div>
+      <ul class="legend-list">
+        <li><strong>Blower runs, no heat</strong><span>Propane shut off, tank empty, or sail switch stuck. Verify tank + listen for burner click.</span></li>
+        <li><strong>Blower cycles on / off fast</strong><span>Low 12 V. Check house-bank voltage &mdash; furnace blower hates low voltage.</span></li>
+        <li><strong>Nothing happens</strong><span>12 V to furnace off (breaker / fuse), or thermostat battery dead. Check the 12 V fuse panel in <a href="bays.html#D1">D1</a>.</span></li>
+        <li><strong>Burner lights, then shuts off</strong><span>Flame sensor dirty or combustion air blocked. Pull the access panel and check.</span></li>
+      </ul>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">TBD when convenient</div>
+          <p>Furnace make / model + BTU rating, thermostat model (it'd help the guide be more specific). Send a photo of the ceiling panel and the furnace nameplate (visible with the panel off) and I'll fill them in on <a href="specs.html">Specs</a>.</p>
         </div>
       </div>
     </section>
