@@ -102,8 +102,8 @@
     },
     {
       q: "How do I start the furnace?",
-      a: "Quick version: (1) Propane ON at the ASME tank in P3. (2) Ceiling control panel in the front walkway. (3) Scroll mode down to FURNACE. (4) Set the setpoint above room temp. The propane burner lights, the blower comes on, and the furnace cycles until the room hits temp. If it's been sitting unused for a while, pull the access panel under the fridge first and check the burn chamber for mouse nests, wasps, or chewed insulation — screwdrivers are in the bottom drawer at the front of the coach. Full procedure: Guide > Furnace.",
-      tags: ["furnace", "heat", "propane", "thermostat", "ceiling panel", "start", "light"],
+      a: "Quick version on the Duo-Therm Comfort Control thermostat (ceiling, front walkway, built into the roof A/C vent housing): (1) Propane ON at the ASME tank in P3. (2) Press MODE until the display reads FURNACE (MODE cycles OFF → FURNACE → COOL → FAN). (3) UP/DOWN sets the SET POINT above room temp. (4) Two zones — press ZONE to switch between Zone 1 and Zone 2 before setting each. The propane burner lights, the blower comes on, and the furnace cycles until the room hits temp. If it's been sitting unused for a while, pull the access panel under the fridge first and check the burn chamber for mouse nests, wasps, or chewed insulation — screwdrivers are in the bottom drawer at the front of the coach. Full procedure: Guide > Furnace.",
+      tags: ["furnace", "heat", "propane", "thermostat", "duo-therm", "comfort control", "dometic", "mode", "set point", "zone", "ceiling panel"],
     },
     {
       q: "Where is the furnace located and how do I access it?",
