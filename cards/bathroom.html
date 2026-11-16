@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script>(function(){var K="diplomat.site.v1",H="c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4";if(location.pathname.split("/").pop()==="gate.html")return;try{if(localStorage.getItem(K)===H)return;}catch(e){}location.replace("../gate.html?return="+encodeURIComponent(location.pathname+location.hash));})();</script>
+  <title>Diplomat &mdash; Bathroom Card (Print)</title>
+  <style>
+    :root {
+      --ink: #111;
+      --ink-dim: #333;
+      --mute: #666;
+      --rule: #000;
+      --soft-bg: #f3f3f3;
+      --warn-bg: #fff8e1;
+      --warn-border: #c88900;
+      --danger-bg: #ffecec;
+      --danger-border: #a60000;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e9e9e9;
+      color: var(--ink);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.35;
+    }
+    .toolbar {
+      max-width: 8.5in;
+      margin: 12px auto;
+      padding: 10px 14px;
+      background: #fff;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--mute);
+    }
+    .toolbar button {
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .toolbar button:hover { background: #333; }
+    .toolbar a { color: #0066cc; text-decoration: none; margin-left: 10px; }
+    .toolbar a:hover { text-decoration: underline; }
+
+    .sheet {
+      max-width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto 20px;
+      background: #fff;
+      padding: 0.5in 0.6in;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .masthead {
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    .masthead h1 {
+      margin: 0 0 4px;
+      font-size: 22pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .masthead .sub {
+      font-size: 10pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+
+    h2 {
+      margin: 18px 0 8px;
+      padding-bottom: 4px;
+      font-size: 13pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-bottom: 1.5px solid var(--rule);
+    }
+    h2:first-of-type { margin-top: 14px; }
+
+    ol.steps, ul.plain {
+      margin: 6px 0 12px;
+      padding-left: 24px;
+      font-size: 11pt;
+    }
+    ol.steps li, ul.plain li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+    ol.steps strong, ul.plain strong { color: #000; }
+
+    table.gauges {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 12px;
+      font-size: 11pt;
+    }
+    table.gauges th, table.gauges td {
+      text-align: left;
+      padding: 6px 8px;
+      border-bottom: 1px solid #999;
+      vertical-align: top;
+    }
+    table.gauges th {
+      font-size: 9pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mute);
+      border-bottom: 1.5px solid var(--rule);
+    }
+    table.gauges td.g {
+      font-weight: 700;
+      width: 1.1in;
+      white-space: nowrap;
+    }
+
+    .callout {
+      margin: 10px 0 12px;
+      padding: 8px 12px;
+      border-left: 4px solid var(--warn-border);
+      background: var(--warn-bg);
+      font-size: 10.5pt;
+    }
+    .callout.danger {
+      border-left-color: var(--danger-border);
+      background: var(--danger-bg);
+    }
+    .callout strong { display: block; margin-bottom: 2px; }
+
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 6px 0 10px;
+    }
+    .col h3 {
+      margin: 0 0 4px;
+      font-size: 10pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+    .col p {
+      margin: 0;
+      font-size: 11pt;
+    }
+
+    table.tsg {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+      margin: 6px 0 12px;
+    }
+    table.tsg th, table.tsg td {
+      text-align: left;
+      padding: 5px 8px;
+      border-bottom: 1px solid #999;
+      vertical-align: top;
+    }
+    table.tsg th {
+      font-size: 9pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mute);
+      border-bottom: 1.5px solid var(--rule);
+      width: 42%;
+    }
+
+    .foot {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px solid #999;
+      font-size: 9pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--mute);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet {
+        max-width: none;
+        margin: 0;
+        padding: 0.35in 0.4in;
+        box-shadow: none;
+        min-height: auto;
+      }
+      @page { margin: 0.4in; }
+      h2 { page-break-after: avoid; }
+      ol.steps, ul.plain, table.gauges, table.tsg, .callout { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>Print this sheet (one page). Fit to page, portrait, color recommended.</span>
+    <span>
+      <button type="button" onclick="window.print()">Print</button>
+      <a href="../index.html#section-plumbing">&larr; Back to Guide</a>
+    </span>
+  </div>
+
+  <div class="sheet">
+    <div class="masthead">
+      <h1>Diplomat &mdash; Bathroom Card</h1>
+      <div class="sub">Water heater &middot; KIB monitor panel &middot; Water pump &middot; Mount near the panel</div>
+    </div>
+
+    <h2>Water Heater &mdash; How To Turn It On</h2>
+    <ol class="steps">
+      <li><strong>Propane ON</strong> at the tank &mdash; passenger-side bay <strong>P3</strong>.</li>
+      <li>Fresh water tank has water, <strong>OR</strong> city water is hooked up at the wet bay (driver-side <strong>D4</strong>). Never fire with no water.</li>
+      <li>On the KIB panel, flip the <strong>HEATER</strong> switch ON.</li>
+      <li>A <strong>RED LIGHT</strong> comes on &mdash; ignition is cycling.</li>
+      <li>Listen for a click, then a steady burn.</li>
+      <li>Walk to the <strong>CLOSET</strong>, open it, look down at the unit, and confirm the burner is actually lit through the sight port.</li>
+      <li>Wait ~20 minutes for 6 gallons to come up to temperature. The heater will then cycle on and off to hold temp.</li>
+    </ol>
+
+    <div class="callout danger">
+      <strong>Walk to the closet and confirm the flame.</strong>
+      Flipping the switch starts the ignition &mdash; it doesn't guarantee the heater actually lit. Unlit cycling means unburned propane is venting. Confirm the flame every time.
+    </div>
+
+    <h3 style="margin:14px 0 4px; font-size:10pt; letter-spacing:1px; text-transform:uppercase; color:#666;">To turn OFF</h3>
+    <ul class="plain">
+      <li>Flip the <strong>HEATER</strong> switch OFF at the KIB panel. The red light goes out.</li>
+      <li>Before driving or long storage, also close propane at the <strong>P3</strong> tank.</li>
+    </ul>
+
+    <h2>KIB Monitor Panel &mdash; Check Tank &amp; Battery Levels</h2>
+    <p style="margin:4px 0 8px; font-size:11pt;">
+      The gauges are dark when idle. <strong>Press and hold the TEST switch</strong> to light them up &mdash; the longer bars = fuller tank. <strong>Release when done</strong> so the house battery isn't being drained to light a readout.
+    </p>
+    <table class="gauges">
+      <thead>
+        <tr><th>Gauge</th><th>What it shows</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="g">LPG</td><td>Propane tank (P3). Check before cooking, heating, or lighting the water heater.</td></tr>
+        <tr><td class="g">FRESH</td><td>Fresh drinking / washing water tank.</td></tr>
+        <tr><td class="g">HOLDING</td><td><strong>Black water</strong> &mdash; the toilet tank. Dump before it's full.</td></tr>
+        <tr><td class="g">GRAY</td><td>Gray water &mdash; sinks and shower.</td></tr>
+        <tr><td class="g">BATTERY</td><td>House battery. L = Low &middot; F = Fair &middot; G = Good &middot; C = Charging (over 13 V on shore / solar / generator).</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Water Pump Switch</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>ON</h3>
+        <p>Fresh water pump runs. Use this when boondocking &mdash; you're drawing from the FRESH tank.</p>
+      </div>
+      <div class="col">
+        <h3>OFF</h3>
+        <p>You're on city water at the wet bay (D4). Pump off so it doesn't dry-run while city pressure feeds the coach.</p>
+      </div>
+    </div>
+
+    <h2>If Something's Wrong</h2>
+    <table class="tsg">
+      <thead>
+        <tr><th>Symptom</th><th>Most likely cause</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Water heater clicks but won't light</td><td>Propane off at P3, tank empty, or igniter needs another cycle. HEATER off, wait 30 sec, HEATER on.</td></tr>
+        <tr><td>No click at all when HEATER is on</td><td>12 V to the heater is dead. Check fuse / breaker in D1; confirm the KIB switch moves freely.</td></tr>
+        <tr><td>Burns briefly then shuts off</td><td>Flame sensor dirty or exhaust blocked. Pull the exterior access cover and inspect.</td></tr>
+        <tr><td>Heater burns but water stays cold</td><td>Bypass valve left in WINTERIZE mode. Behind the closet, at the top of the unit &mdash; return to NORMAL.</td></tr>
+        <tr><td>No water pressure anywhere</td><td>PUMP switch is off (if boondocking), fresh tank empty, or city hose kinked / disconnected.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="foot">
+      <span>Full Guide: diplomat site &rsaquo; Plumbing</span>
+      <span>Rev 1</span>
+    </div>
+  </div>
+</body>
+</html>
