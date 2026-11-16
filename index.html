@@ -1459,7 +1459,7 @@
         <h2>Plumbing &mdash; Shower Valve</h2>
         <span class="meta" data-progress></span>
       </div>
-      <div class="section-sub">Phoenix Faucets 4" two-handle &middot; PF213350 &middot; Lasco S-447-3NL stems</div>
+      <div class="section-sub">Phoenix Faucets 4" two-handle &middot; PF213350 &middot; Lasco S-447-3NL stems &middot; KIB monitor panel runs the pump + water heater</div>
 
       <figure class="panel-diagram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="plmb-title plmb-desc">
@@ -1572,6 +1572,124 @@
           <span class="step-body">Re-fit handles, escutcheons, trim. Confirm no drip after a 15-minute soak test.</span>
         </li>
       </ol>
+
+      <div class="subhead">Water Heater</div>
+
+      <div class="banner banner-warning">
+        <span class="led amber"></span>
+        <div class="banner-body">
+          <div class="banner-title">Verify the propane is actually burning</div>
+          <p>Flipping the switch at the panel starts an ignition cycle &mdash; it doesn't guarantee the heater lit. After you flip HEATER on, walk to the unit and visually confirm the burner is lit (flame audible and visible through the sight port). An unlit cycle = unburned propane venting = don't ignore it.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Start It</div>
+      <ol class="steps" data-steps="water-heater-start">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Propane ON at the ASME tank in <a href="bays.html#P3">P3</a>.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Verify the fresh water tank has water OR city water is hooked up at the wet bay <a href="bays.html#D4">D4</a>.
+            <span class="note">Dry-firing the water heater burns out the element and the anode rod.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">03</span>
+          <span class="step-body">
+            Find the KIB monitor panel (see below). Flip the <strong>HEATER</strong> switch ON.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">04</span>
+          <span class="step-body">
+            A red indicator comes on &mdash; the ignition cycle is running.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">05</span>
+          <span class="step-body">
+            Listen for the ignition click, then a steady burn.
+            <span class="note">Clicks without a catch = no propane, or the heater needs a reset. See Troubleshooting.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">06</span>
+          <span class="step-body">
+            Walk to the unit &mdash; UNDER THE CLOSET. Open the closet, look down at the heater installation (red / blue PEX visible), confirm the burner is lit through the sight port.
+            <span class="note">Red PEX = hot out, blue PEX = cold in. Hardwired 12 V to the ignitor sits at the bottom.</span>
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">07</span>
+          <span class="step-body">
+            Give it ~20 minutes to bring 6 gallons up to temp. It'll cycle on / off automatically after that to hold temp.
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Shut It Down</div>
+      <ol class="steps" data-steps="water-heater-off">
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">01</span>
+          <span class="step-body">
+            Flip the HEATER switch OFF at the KIB panel. The red light goes out.
+          </span>
+        </li>
+        <li class="step" data-checked="false">
+          <span class="led amber"></span>
+          <span class="step-index">02</span>
+          <span class="step-body">
+            Before driving or long storage: also close propane at the <a href="bays.html#P3">P3</a> tank.
+          </span>
+        </li>
+      </ol>
+
+      <div class="subhead">Troubleshooting</div>
+      <ul class="legend-list">
+        <li><strong>Click, no burn</strong><span>Propane off, tank empty, or igniter needs another cycle. Flip HEATER off, wait 30 sec, flip back on.</span></li>
+        <li><strong>No click at all</strong><span>12 V to the heater is dead. Check the panel breaker / fuse, confirm HEATER switch is good, confirm house bank voltage.</span></li>
+        <li><strong>Burns briefly, then shuts off</strong><span>Dirty flame sensor or blocked exhaust. Pull the exterior access cover and inspect.</span></li>
+        <li><strong>Burns but water stays cold</strong><span>Bypass valve left in "bypass" mode from winterizing. The bypass sits with the hot/cold PEX at the top of the unit &mdash; return the valves to NORMAL (not bypass).</span></li>
+      </ul>
+
+      <div class="subhead">KIB Monitor Panel</div>
+
+      <div class="banner banner-info">
+        <span class="led blue"></span>
+        <div class="banner-body">
+          <div class="banner-title">What this panel shows and runs</div>
+          <p>One panel, five gauges, three switches. Reads: propane tank, fresh water, black (holding), gray water, house battery. Runs: water pump, water heater.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Gauges (hold TEST to read)</div>
+      <ul class="legend-list">
+        <li><strong>LPG</strong><span>Propane tank level &mdash; E / 1&frasl;3 / 2&frasl;3 / F.</span></li>
+        <li><strong>FRESH</strong><span>Fresh water tank level.</span></li>
+        <li><strong>HOLDING</strong><span>Black water tank (toilet). Empty well before full &mdash; dumping sooner is easier than later.</span></li>
+        <li><strong>GRAY</strong><span>Gray water tank (sinks + shower).</span></li>
+        <li><strong>BATTERY</strong><span>House battery state: L (Low) &middot; F (Fair) &middot; G (Good) &middot; C (Charge, over 13 V on shore / solar / genset).</span></li>
+      </ul>
+
+      <div class="subhead">Switches</div>
+      <ul class="legend-list">
+        <li><strong>TEST</strong><span>Hold to light the gauges. Release to save battery &mdash; gauges go dark but levels keep tracking.</span></li>
+        <li><strong>PUMP</strong><span>Fresh water pump. ON when boondocking / running from the fresh tank. OFF on city water (otherwise the pump dry-runs when city is active).</span></li>
+        <li><strong>HEATER</strong><span>Water heater propane ignition. Red light = cycling. See Start It above for the full procedure.</span></li>
+      </ul>
     </section>
 
     <footer class="footer">

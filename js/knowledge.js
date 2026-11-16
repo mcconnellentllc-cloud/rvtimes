@@ -111,6 +111,21 @@
       tags: ["furnace", "access", "service", "burn chamber", "fridge", "screwdriver", "propane"],
     },
     {
+      q: "How do I turn on the water heater?",
+      a: "Different unit from the furnace — this one makes HOT WATER, and it lives UNDER THE CLOSET. (1) Propane ON at the P3 tank. (2) Confirm water in the fresh tank OR city water is hooked up — dry-firing burns out the element. (3) KIB monitor panel → flip the HEATER switch ON. (4) Red indicator lights up and the ignition cycles. (5) Listen for the click and then a steady burn. (6) Walk to the closet, open it, and look down at the heater — confirm the burner is actually lit through the sight port. (7) Give it ~20 minutes to bring 6 gallons up to temp. Full procedure: Guide > Plumbing > Water Heater.",
+      tags: ["water heater", "hot water", "propane", "KIB", "panel", "closet", "ignition", "heater switch"],
+    },
+    {
+      q: "What do the gauges and switches on the KIB monitor panel mean?",
+      a: "Five gauges, three switches. Gauges show: LPG (propane), FRESH (fresh water), HOLDING (black / toilet), GRAY (sinks + shower), BATTERY (house bank: L low / F fair / G good / C charging). The gauges are dark normally — hold the TEST switch to light them up, release to turn off. PUMP runs the fresh water pump (ON when boondocking from the fresh tank, OFF when on city water). HEATER runs the propane ignition on the water heater under the closet.",
+      tags: ["KIB", "monitor panel", "gauges", "tank", "LPG", "fresh", "gray", "holding", "battery", "test", "pump", "heater"],
+    },
+    {
+      q: "The water heater won't light — what do I check?",
+      a: "Walk through the symptom. (1) I hear clicks but no burn: propane off at P3, or the tank is empty, or the igniter needs another cycle. Flip HEATER off at the KIB panel, wait 30 seconds, flip it back on. (2) No click at all: 12 V to the heater is dead — check the main 12 V panel in D1 for a tripped breaker or blown fuse, confirm the HEATER switch is working. (3) Burns a few seconds, then shuts off: dirty flame sensor or blocked exhaust — pull the exterior access cover and inspect. (4) Heater burns fine but the water's cold: the winterizing BYPASS valve was left in bypass mode — find it at the top of the unit where red/blue PEX enters and return it to NORMAL.",
+      tags: ["water heater", "troubleshooting", "won't light", "no hot water", "bypass", "propane", "KIB"],
+    },
+    {
       q: "What's the power draw of the Starlink Mini and how do I run it on 12V DC?",
       a: "Mini uses USB-C PD input, 12-48 V input range, typical 20-40 W / peak ~100 W. Three ways to power on the coach: (1) included 100 W USB-C PD brick plugged into shore, generator, or inverter outlet — simplest, ~30 W draw end-to-end; (2) any quality 100 W-rated USB-C PD adapter; (3) a 12 V USB-C PD trigger adapter for direct DC from the house bank — skips the inverter so you don't idle it for a 30 W load. Options (1) and (2) are easy; option (3) is nicer for long boondocking because you lose the inverter conversion loss.",
       tags: ["starlink", "mini", "power", "watts", "USB-C", "PD", "12V", "DC", "inverter"],
