@@ -95,7 +95,7 @@
         To turn it on: deploy to Vercel with AIRTABLE_TOKEN,
         AIRTABLE_BASE_ID and LOGBOOK_PIN set.
       </p>
-      <a href="index.html" class="go" style="display:block;text-decoration:none;text-align:center;">Back to Guide</a>
+      <a href="index.html" class="go" style="display:block;text-decoration:none;text-align:center;">Back to Home</a>
     `;
   }
 
