@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <script>(function(){var K="diplomat.site.v1",H="c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4";if(location.pathname.split("/").pop()==="gate.html")return;try{if(localStorage.getItem(K)===H)return;}catch(e){}location.replace("gate.html?return="+encodeURIComponent(location.pathname+location.hash));})();</script>
+  <title>Diplomat &mdash; Channels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <h1>Channel Search</h1>
+          <div class="sub">SuperBOX lineup &middot; type a name or number</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+          <a href="index.html">Guide</a>
+          <a href="superbox.html">SuperBOX</a>
+          <a href="channels.html" class="active">Channels</a>
+          <a href="specs.html">Specs</a>
+          <a href="bays.html">Bays</a>
+          <a href="manual.html">Manual</a>
+          <a href="knowledge.html">Knowledge</a>
+          <a href="logbook.html">Logbook</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner banner-info">
+      <span class="led blue"></span>
+      <div class="banner-body">
+        <div class="banner-title">How to use this</div>
+        <p>Type any part of a channel name (HBO, HGTV, History) or a number (89) to filter. On the SuperBOX remote, use the <strong>search</strong> button for the same thing on the TV. The box carries about 1,994 channels and new ones get added here as EPG screenshots come in.</p>
+      </div>
+    </div>
+
+    <div class="kb-search">
+      <input id="ch-input" type="search" placeholder="Search channel name or number&hellip;" autocomplete="off" inputmode="search">
+      <button id="ch-clear" class="clear" type="button">Clear</button>
+    </div>
+    <div class="kb-meter" id="ch-meter"></div>
+
+    <div class="subhead">Channel Categories on the Box</div>
+    <div class="ch-cats" id="ch-cats"></div>
+
+    <div class="ch-table-wrap">
+      <table class="ch-table" id="ch-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Channel</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="kb-empty" id="ch-empty" hidden>No matches.</div>
+
+    <div class="banner banner-info" style="margin-top: 18px;">
+      <span class="led amber"></span>
+      <div class="banner-body">
+        <div class="banner-title">Growing the list</div>
+        <p>This list is seeded from the EPG photos on hand. To add more: on the SuperBOX, scroll through each category (Network TV, Regional Locals, Sports Networks, 24/7, PPV Events, MLS) and snap a photo of the channel list. The site admin adds them to the database and they show up here.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Diplomat &middot; Channels</span>
+      <a href="superbox.html">SuperBOX how-to &rsaquo;</a>
+    </footer>
+  </main>
+  <script src="js/channels.js"></script>
+</body>
+</html>
