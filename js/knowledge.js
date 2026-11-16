@@ -115,6 +115,21 @@
       a: "The SuperBOX S3 Pro streaming box sits on the shelf under the front Vizio TV. On the Vizio remote, switch the INPUT to HDMI 2 — that's the SuperBOX. Home screen gives you Live TV, VOD, Playback, Browser, Apps, App Store, YouTube, and OTA TV ROM. Other TV inputs (HDMI 1, antenna, etc.) are TBD until documented.",
       tags: ["TV", "superbox", "s3 pro", "front TV", "vizio", "HDMI 2", "streaming", "input", "entertainment"],
     },
+    {
+      q: "The SuperBOX remote isn't doing anything — how do I wake it up?",
+      a: "The SuperBOX remote is a mini wireless QWERTY + touchpad, backlit. It goes to sleep after inactivity and can lose the wireless pairing until it's power-cycled. There's a small SLIDER SWITCH on the top edge of the remote, near the top-right corner — slide it OFF, wait a second, slide it ON. Blue LED should light up and the keys backlight. Then try again. Still dead = batteries: it uses standard AA(s) in a compartment on the back. If you can't find the dongle on the SuperBOX end, it's a small USB receiver plugged into the back of the box under the shelf.",
+      tags: ["TV", "superbox", "remote", "keyboard", "power switch", "slider", "not working", "unresponsive", "wake up"],
+    },
+    {
+      q: "How does LIVE TV work on the SuperBOX?",
+      a: "From the home screen, open the big blue LIVE TV tile. You get an electronic program guide (EPG) — a grid of channels organized by category: US cable networks, local affiliates, sports, news, movies, kids, international, premium (HBO / Showtime / etc.). Arrow keys navigate the guide, OK plays the highlighted channel. Most channels support 7-day CATCH-UP / replay — back up in the EPG to watch shows that already aired. Many channels allow pause and rewind on live. Mark favorites with the function key to shorten the list. The channel count is in the thousands, so expect some dead or duplicate feeds — if something won't load after a few seconds, move on.",
+      tags: ["TV", "superbox", "live TV", "IPTV", "channels", "EPG", "guide", "cable", "sports"],
+    },
+    {
+      q: "How does VOD (Video on Demand) work on the SuperBOX?",
+      a: "From the home screen, open the orange VOD tile. It's a movie + TV series library organized by category: New Releases, Action, Comedy, Drama, Kids, TV Series, etc. Use the remote's touchpad + keyboard to search by title. Highlight a title → OK → the detail page shows poster, year, rating, and description → pick a quality (HD / 4K when available) → play. The library typically includes recent theatrical releases, often still in theaters. No pay-per-view — VOD content is part of the SuperBOX subscription. If a title stalls partway, back out and pick a different quality or a different source listing; VOD pulls from multiple streams, so one being down doesn't kill the title.",
+      tags: ["TV", "superbox", "VOD", "video on demand", "movies", "TV series", "streaming", "quality"],
+    },
       a: "Different unit from the furnace — this one makes HOT WATER, and it lives UNDER THE CLOSET. (1) Propane ON at the P3 tank. (2) Confirm water in the fresh tank OR city water is hooked up — dry-firing burns out the element. (3) KIB monitor panel → flip the HEATER switch ON. (4) Red indicator lights up and the ignition cycles. (5) Listen for the click and then a steady burn. (6) Walk to the closet, open it, and look down at the heater — confirm the burner is actually lit through the sight port. (7) Give it 20-30 minutes to bring 6 gallons up to temp. Before complaining about no hot water: confirm the HEATER switch is actually ON (red light visible) and that 20-30 min has passed since it was turned on. Full procedure: Guide > Plumbing > Water Heater.",
       tags: ["water heater", "hot water", "propane", "KIB", "panel", "closet", "ignition", "heater switch", "20 minutes", "30 minutes"],
     },
