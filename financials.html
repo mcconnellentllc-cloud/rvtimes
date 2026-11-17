@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <script>(function(){var K="diplomat.site.v1",H="c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4",AC="diplomat.access.v1",AK="Dnk5SHtkPaEvyroPGRtNw6po",G="gate.html";if(location.pathname.split("/").pop()==="gate.html")return;try{var p=new URLSearchParams(location.search);if(p.get("access")===AK){document.cookie=AC+"=1; path=/; SameSite=Lax";p.delete("access");var q=p.toString();history.replaceState(null,"",location.pathname+(q?"?"+q:"")+location.hash);return;}if(document.cookie.split(";").some(function(c){return c.trim().indexOf(AC+"=")===0;}))return;if(localStorage.getItem(K)===H)return;}catch(e){}location.replace(G+"?return="+encodeURIComponent(location.pathname+location.search+location.hash));})();</script>
+  <script>(function(){var AKEY="diplomat.admin.v1",AHASH="108d5d98996191adafc8659485733bf0b98d8f56a051ce7ff06eba5a9e463030";if(location.pathname.split("/").pop()==="admin-gate.html")return;try{if(localStorage.getItem(AKEY)===AHASH)return;}catch(e){}location.replace("admin-gate.html?return="+encodeURIComponent(location.pathname+location.search+location.hash));})();</script>
+  <title>Diplomat &mdash; Financials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panel.css">
+  <style>
+    .tbd {
+      color: var(--amber);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+    .admin-lock {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 1px solid rgba(255, 74, 61, 0.35);
+      background: rgba(255, 74, 61, 0.05);
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <h1>Financials <span class="admin-lock">Admin</span></h1>
+          <div class="sub">Purchase &middot; title &middot; insurance &middot; annual costs</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+                    <a href="index.html">Home</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="superbox.html">SuperBOX</a>
+                    <a href="channels.html">Channels</a>
+                    <a href="specs.html">Specs</a>
+                    <a href="bays.html">Bays</a>
+                    <a href="maintenance.html">Maintenance</a>
+                    <a href="manual.html">Manual</a>
+                    <a href="knowledge.html">Knowledge</a>
+                    <a href="logbook.html">Logbook</a>
+                    <a href="financials.html" class="active">Financials</a>
+                    <a href="revenue.html">Revenue</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner banner-warning">
+      <span class="led red"></span>
+      <div class="banner-body">
+        <div class="banner-title">Admin only</div>
+        <p>This page is behind a second password that renters do not have. Do not paste or share the admin password where a guest could see it.</p>
+      </div>
+    </div>
+
+    <div class="subhead">Purchase</div>
+    <div class="spec-group" id="f-purchase"></div>
+
+    <div class="subhead">Title</div>
+    <div class="spec-group" id="f-title"></div>
+
+    <div class="subhead">Insurance</div>
+    <div id="f-insurance"></div>
+
+    <div class="subhead">Annual costs</div>
+    <div class="spec-group" id="f-costs"></div>
+
+    <div class="banner banner-info" style="margin-top: 22px;">
+      <span class="led blue"></span>
+      <div class="banner-body">
+        <div class="banner-title">Adding records</div>
+        <p>Everything on this page lives in <code>js/financials.js</code>. Tell me a purchase price, an insurance renewal, a receipt, anything &mdash; I add it and push. Scans of the title and the insurance card need a decision first (see the note on the home page about the public repo).</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Diplomat &middot; Financials</span>
+      <span>Admin</span>
+    </footer>
+  </main>
+  <script src="js/financials.js"></script>
+</body>
+</html>

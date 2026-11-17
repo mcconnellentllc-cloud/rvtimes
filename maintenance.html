@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <script>(function(){var K="diplomat.site.v1",H="c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4",AC="diplomat.access.v1",AK="Dnk5SHtkPaEvyroPGRtNw6po",G="gate.html";if(location.pathname.split("/").pop()==="gate.html")return;try{var p=new URLSearchParams(location.search);if(p.get("access")===AK){document.cookie=AC+"=1; path=/; SameSite=Lax";p.delete("access");var q=p.toString();history.replaceState(null,"",location.pathname+(q?"?"+q:"")+location.hash);return;}if(document.cookie.split(";").some(function(c){return c.trim().indexOf(AC+"=")===0;}))return;if(localStorage.getItem(K)===H)return;}catch(e){}location.replace(G+"?return="+encodeURIComponent(location.pathname+location.search+location.hash));})();</script>
+  <title>Diplomat &mdash; Maintenance Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panel.css">
+  <style>
+    .mt-sys-bar {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin: 0 0 14px;
+    }
+    .mt-sys {
+      background: var(--bg-elev);
+      border: 1px solid var(--bezel);
+      color: var(--ink-mute);
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .mt-sys:hover { color: var(--ink); }
+    .mt-sys.active {
+      color: var(--ink);
+      border-color: var(--bezel-hi);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .mt-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .mt-card {
+      border: 1px solid var(--bezel);
+      border-radius: 8px;
+      background: var(--bg-panel);
+      padding: 14px 18px;
+    }
+    .mt-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 6px;
+    }
+    .mt-date { color: var(--amber); }
+    .mt-system {
+      border: 1px solid var(--bezel);
+      border-radius: 3px;
+      padding: 2px 8px;
+      background: var(--bg-elev);
+    }
+    .mt-service {
+      margin: 0 0 10px;
+      font-family: var(--display);
+      font-size: 15px;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .mt-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 0 0 10px;
+    }
+    .mt-meta > div { display: flex; gap: 6px; align-items: baseline; }
+    .mt-meta dt {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin: 0;
+    }
+    .mt-meta dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .mt-notes {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-dim);
+    }
+    .mt-parts {
+      margin: 10px 0 0;
+      padding: 10px 0 0;
+      border-top: 1px solid var(--rail);
+      list-style: none;
+    }
+    .mt-parts li {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-dim);
+      padding: 2px 0;
+    }
+    .mt-src { color: var(--ink-mute); }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <h1>Maintenance</h1>
+          <div class="sub">Service log &middot; parts, hours, notes</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+                    <a href="index.html">Home</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="superbox.html">SuperBOX</a>
+                    <a href="channels.html">Channels</a>
+                    <a href="specs.html">Specs</a>
+                    <a href="bays.html">Bays</a>
+                    <a href="maintenance.html" class="active">Maintenance</a>
+                    <a href="manual.html">Manual</a>
+                    <a href="knowledge.html">Knowledge</a>
+                    <a href="logbook.html">Logbook</a>
+                    <a href="financials.html">Financials</a>
+                    <a href="revenue.html">Revenue</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="kb-search">
+      <input id="m-input" type="search" placeholder="Search a service, part, date&hellip;" autocomplete="off">
+      <button id="m-clear" class="clear" type="button">Clear</button>
+    </div>
+    <div class="kb-meter" id="m-meter"></div>
+
+    <div class="subhead">Filter by system</div>
+    <div class="mt-sys-bar" id="m-systems"></div>
+
+    <div class="mt-list" id="m-list"></div>
+    <div class="kb-empty" id="m-empty" hidden>No matching records.</div>
+
+    <div class="banner banner-info" style="margin-top: 20px;">
+      <span class="led blue"></span>
+      <div class="banner-body">
+        <div class="banner-title">Adding records</div>
+        <p>Entries live in <code>js/maintenance.js</code>. Tell me the date, system, what was done, hours (if applicable), who did it, cost, and any parts &mdash; I add it and push. Newest entries go on top.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Diplomat &middot; Maintenance</span>
+      <span id="m-count"></span>
+    </footer>
+  </main>
+  <script src="js/maintenance.js"></script>
+</body>
+</html>

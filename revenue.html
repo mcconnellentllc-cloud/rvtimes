@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e0f">
+  <script>(function(){var K="diplomat.site.v1",H="c6a96a629f87effebebe4a8bf800f990041ccfe88459c1796e52ecb1ddeae2f4",AC="diplomat.access.v1",AK="Dnk5SHtkPaEvyroPGRtNw6po",G="gate.html";if(location.pathname.split("/").pop()==="gate.html")return;try{var p=new URLSearchParams(location.search);if(p.get("access")===AK){document.cookie=AC+"=1; path=/; SameSite=Lax";p.delete("access");var q=p.toString();history.replaceState(null,"",location.pathname+(q?"?"+q:"")+location.hash);return;}if(document.cookie.split(";").some(function(c){return c.trim().indexOf(AC+"=")===0;}))return;if(localStorage.getItem(K)===H)return;}catch(e){}location.replace(G+"?return="+encodeURIComponent(location.pathname+location.search+location.hash));})();</script>
+  <script>(function(){var AKEY="diplomat.admin.v1",AHASH="108d5d98996191adafc8659485733bf0b98d8f56a051ce7ff06eba5a9e463030";if(location.pathname.split("/").pop()==="admin-gate.html")return;try{if(localStorage.getItem(AKEY)===AHASH)return;}catch(e){}location.replace("admin-gate.html?return="+encodeURIComponent(location.pathname+location.search+location.hash));})();</script>
+  <title>Diplomat &mdash; Revenue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panel.css">
+  <style>
+    .admin-lock {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 1px solid rgba(255, 74, 61, 0.35);
+      background: rgba(255, 74, 61, 0.05);
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .r-table-wrap {
+      border: 1px solid var(--bezel);
+      border-radius: 8px;
+      background: var(--bg-panel);
+      overflow: hidden;
+      overflow-x: auto;
+      margin-bottom: 18px;
+    }
+    .r-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+    }
+    .r-table th, .r-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-top: 1px solid var(--rail);
+      font-size: 13.5px;
+      vertical-align: top;
+    }
+    .r-table thead th {
+      border-top: none;
+      background: var(--bg-elev);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: normal;
+    }
+    .r-table tbody tr:first-child td { border-top: none; }
+    .r-table .r-dates { font-family: var(--mono); color: var(--amber); white-space: nowrap; }
+    .r-table .r-num { font-family: var(--mono); text-align: right; white-space: nowrap; }
+    .r-table .r-total { color: var(--green); font-weight: 500; }
+    .r-table .r-ctx {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .r-paid {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      border: 1px solid rgba(46, 224, 106, 0.4);
+      background: rgba(46, 224, 106, 0.05);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+    .r-owed {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--amber);
+      border: 1px solid rgba(255, 176, 32, 0.4);
+      background: rgba(255, 176, 32, 0.05);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <header class="masthead">
+      <div class="mast-row">
+        <div>
+          <h1>Revenue <span class="admin-lock">Admin</span></h1>
+          <div class="sub">Rentals &middot; nights &middot; totals by year</div>
+        </div>
+        <nav class="mast-nav" aria-label="Site">
+                    <a href="index.html">Home</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="superbox.html">SuperBOX</a>
+                    <a href="channels.html">Channels</a>
+                    <a href="specs.html">Specs</a>
+                    <a href="bays.html">Bays</a>
+                    <a href="maintenance.html">Maintenance</a>
+                    <a href="manual.html">Manual</a>
+                    <a href="knowledge.html">Knowledge</a>
+                    <a href="logbook.html">Logbook</a>
+                    <a href="financials.html">Financials</a>
+                    <a href="revenue.html" class="active">Revenue</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner banner-warning">
+      <span class="led red"></span>
+      <div class="banner-body">
+        <div class="banner-title">Admin only</div>
+        <p>Guest names, nightly rates and totals live here. Not for renters to see.</p>
+      </div>
+    </div>
+
+    <div class="subhead">By year</div>
+    <div class="spec-group" id="r-years" style="margin-bottom: 18px;"></div>
+
+    <div class="subhead">All stays</div>
+    <div class="r-table-wrap">
+      <table class="r-table" id="r-table">
+        <thead>
+          <tr>
+            <th>Dates</th>
+            <th>Guest</th>
+            <th class="r-num">Nts</th>
+            <th class="r-num">Nightly</th>
+            <th class="r-num">Cleaning</th>
+            <th class="r-num">Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="kb-empty" id="r-empty" hidden>No rentals recorded yet.</div>
+
+    <div class="banner banner-info" style="margin-top: 18px;">
+      <span class="led blue"></span>
+      <div class="banner-body">
+        <div class="banner-title">Adding a stay</div>
+        <p>Tell me the dates, guest, nights, nightly rate (and cleaning fee if separate), and whether paid or owed. I add a row to <code>js/revenue.js</code> and push. The year totals update automatically.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Diplomat &middot; Revenue</span>
+      <span>Admin</span>
+    </footer>
+  </main>
+  <script src="js/revenue.js"></script>
+</body>
+</html>
