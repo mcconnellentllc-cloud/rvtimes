@@ -116,19 +116,34 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
 }
 @media (max-width: 720px) {
-  .mast-row { gap: 12px; }
+  .panel { padding-top: 0; }
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: 0 -12px 16px;
+    padding: 12px 16px 10px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .masthead h1 { font-size: 16px; }
+  .masthead .sub { font-size: 10.5px; margin-top: 3px; }
+  .mast-row { gap: 10px; align-items: flex-start; }
   .mast-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
     width: 100%;
     margin: 0 -4px;
-    padding: 4px 4px 2px;
+    padding: 2px 4px;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
   }
   .mast-nav::-webkit-scrollbar { display: none; }
-  .mast-nav a { scroll-snap-align: start; }
+  .mast-nav a { scroll-snap-align: start; padding: 6px 10px; }
 }
 .mast-nav a:hover { color: var(--ink); text-decoration: none; }
 .mast-nav a.active {
@@ -827,9 +842,7 @@ a:hover { text-decoration: underline; }
 .reset-btn:hover { color: var(--ink); border-color: var(--bezel-hi); }
 
 @media (max-width: 520px) {
-  .panel { padding: 16px 12px 80px; }
-  .masthead { padding: 16px 18px; }
-  .masthead h1 { font-size: 18px; }
+  .panel { padding: 0 12px 80px; }
   .step { padding: 12px 14px; gap: 12px; }
   .step-body { font-size: 14.5px; }
   .section-head h2 { font-size: 14px; }
